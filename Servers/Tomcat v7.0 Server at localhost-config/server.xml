@@ -126,7 +126,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="pet" path="/pet" reloadable="true" source="org.eclipse.jst.jee.server:pet"/><Context docBase="password" path="/password" reloadable="true" source="org.eclipse.jst.jee.server:password"/><Context docBase="Questionnaire" path="/Questionnaire" reloadable="true" source="org.eclipse.jst.jee.server:Questionnaire"/><Context docBase="cookie" path="/cookie" reloadable="true" source="org.eclipse.jst.jee.server:cookie"/><Context docBase="rewriting" path="/rewriting" reloadable="true" source="org.eclipse.jst.jee.server:rewriting"/><Context docBase="session" path="/session" reloadable="true" source="org.eclipse.jst.jee.server:session"/><Context docBase="login_session" path="/login_session" reloadable="true" source="org.eclipse.jst.jee.server:login_session"/><Context docBase="encodeURL" path="/encodeURL" reloadable="true" source="org.eclipse.jst.jee.server:encodeURL"/><Context docBase="Filter" path="/Filter" reloadable="true" source="org.eclipse.jst.jee.server:Filter"/><Context docBase="MyFirstServelet" path="/MyFirstServelet" reloadable="true" source="org.eclipse.jst.jee.server:MyFirstServelet"/></Host>
+      <Context docBase="MyFirstServelet" path="/MyFirstServelet" reloadable="true" source="org.eclipse.jst.jee.server:MyFirstServelet"/></Host>
     </Engine>
   </Service>
 </Server>

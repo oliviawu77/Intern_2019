@@ -15,6 +15,11 @@ public class Hello {
         password.put("Nick", "sport");   
     }
     
+    public void register(String user,String msg, String pwd){
+    	password.put(user, msg);
+    	password.put(user, pwd);
+    }    
+    
     public String getPassword(String user) {	//透過該使用者的名字去 map 裡面搜尋他的密碼
         return password.get(user);
     }

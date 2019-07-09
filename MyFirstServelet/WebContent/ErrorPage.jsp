@@ -8,6 +8,6 @@
 </head>
 <body>
 <p>${message}</p>
-<a href='MyFirstServlet'>回到登入頁面</a>
+<a href='login.jsp'>回到登入頁面</a>
 </body>
 </html>

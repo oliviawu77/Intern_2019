@@ -8,8 +8,26 @@
 </head>
 <body>
 <p>${message}</p>
-<a href="changepwd">更換我的密碼</a>
-<a href="changemsg">更換我的訊息</a>
-<a href="logout">登出</a>
+<table>
+	<tr>
+	<td>	
+	<a href="changepwd">更換我的密碼</a>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<a href="changemsg">更換我的訊息</a>
+	</td>
+	</tr>	
+	<tr>
+	<td>
+		<p>目前在線人數:${cont}</p>
+	</td>
+	</tr>	
+</table>
+  <!-- 新增logout button -->
+	<form action='Logout'  method="post">
+		<input name="button" type="submit" id="button" value="登出">
+	</form>
 </body>
 </html>

@@ -16,21 +16,22 @@
 	<table>
 	<tr>
 	<td>
-  		<h1>姓名:</h1><input type="text" name="name">
+  		<p>姓名:</p><input type="text" name="name">
 	</td>
 	</tr>
 	<tr>
  	<td>
-   		<h1>密碼:</h1><input type="password" name="mypassword">
+   		<p>密碼:</p><input type="password" name="mypassword">
 	</td>
 	</tr>
 	<tr>
  	<td>
-   		<input type="submit" value="submit">
+   		<input type="submit" value="登入">
 	</td>
 	</tr>	
 	</table>
 </div>
 </form>
+   		<input type="button" value="註冊" onclick="location.href='register.jsp'">
 </body>
 </html>

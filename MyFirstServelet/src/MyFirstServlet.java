@@ -5,6 +5,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/MyFirstServlet")
 
@@ -18,17 +19,19 @@ public class MyFirstServlet extends HttpServlet {
 	//這裡就要整理一下web.xml
 	//也就是部屬描述檔(Deployment Descriptor,簡稱DD)
 	//Container藉由這個DD來得知如何去執行 servlet 及JSP
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { 
+	
+	
+	//整個都可以拿掉,因為現在直接透過filter去呼叫Login.jsp
+    //可是因為 error page 也要導回來，所以暫時先留著
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { 
 		request.getRequestDispatcher("login.jsp").forward(request, response);
+
 		//forward由request.getRequestDispatcher去做呼叫
 		//這裡有再加上一個return;代表跳轉過去就不再執行下面的code了
 		//使用forward由於內部呼叫,在client上並不會看到程式的名稱
 		//而是在JSP中設定action的名稱
 		
 } 
-    public void setMsg(String user){
-    	
-    }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	
@@ -48,6 +51,10 @@ public class MyFirstServlet extends HttpServlet {
 	  			String message = hello.doHello(name); //產生個別使用者的歡迎訊息
 	  			request.setAttribute("message",message); //request.setAttribute(指定要傳給的對象名字，傳入的參數)
 	  			request.setAttribute("name",name);
+	  			HttpSession session = request.getSession();
+	  			session.setAttribute("name",name);
+	  			//request.setAttribute("cont",MyListener.GetSessions()); 
+	  			request.setAttribute("cont",myLoginListener.GetSessions());
 	  			request.getRequestDispatcher("IIndex.jsp").forward(request, response);
 	  			return;
 	  		}
