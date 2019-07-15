@@ -36,7 +36,6 @@ public class DBController {
 			String pwd_new = "'test@example.com'";		
 			System.out.println(st);
 			String query = "INSERT INTO `crud`.`account` (`id`, `name`, `mail`, `phone`) VALUES (" + id_new + ", "+ acc_new +", "+ pwd_new +");";
-			//String query = "INSERT INTO `crud`.`user` (`id`, `name`, `mail`, `phone`) VALUES ('77', 'Carol', 'amy3344@yahoo.com.tw', '0934569043');";
 			System.out.println(query);
 			st.executeUpdate(query);
 		} catch (Exception ex) {
@@ -47,7 +46,6 @@ public class DBController {
 	public ArrayList<Data> getData() {
 		ArrayList<Data> result=new ArrayList<Data>();
 		try {
-			System.out.println(st);
 			String query = "select * from account";
 			rs = st.executeQuery(query);
 			while (rs.next()) {
@@ -66,20 +64,41 @@ public class DBController {
 	public String  getPwd(String acc){
 		String pwd_result = null;
 		try {
-			acc = "'" + "'";
-			String query = "SELECT Password FROM account WHERE Account=" + acc;
-			
-			//String query = "INSERT INTO `crud`.`user` (`id`, `name`, `mail`, `phone`) VALUES ('77', 'Carol', 'amy3344@yahoo.com.tw', '0934569043');";
-			System.out.println(query);
+			//String query = "SELECT Account, Password FROM account WHERE Account=" + "\"" + acc +"\"";
+			String query = "select * from account";
 			rs = st.executeQuery(query);
-			pwd_result = rs.getString("Password");
-
+			while (rs.next()) {
+				if (acc.equals(rs.getString("Account")))
+				{
+					pwd_result = rs.getString("Password");
+					break;
+				}
+			}
 		} catch (Exception ex) {
 			System.out.println(ex);
 		}				
-		
 		return pwd_result;
 	}
+
+	public String  changePwd(String acc,String pwd_new){
+		String pwd_result = null;
+		try {
+			String query = "select * from account";
+			rs = st.executeQuery(query);
+			while (rs.next()) {
+				if (acc.equals(rs.getString("Account")))
+				{
+					query = "UPDATE `account` SET Password = '"+ pwd_new +"' WHERE Account = '"+ acc +"' ";
+					System.out.println(query);
+					st.executeUpdate(query);
+					break;
+				}
+			}
+		} catch (Exception ex) {
+			System.out.println(ex);
+		}				
+		return pwd_result;
+	}	
 	
 	
 

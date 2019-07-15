@@ -8,6 +8,6 @@
 </head>
 <body>
 <p>${message}</p>
-<a href='UI.jsp'>回到登入頁面</a>
+<a href='/DB_Test2/'>回到登入頁面</a>
 </body>
 </html>

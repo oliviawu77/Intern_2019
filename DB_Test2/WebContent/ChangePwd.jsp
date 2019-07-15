@@ -10,15 +10,10 @@
 <title>登入</title>
 </head>
 <body>
-	<form action="MyFirstServlet" method="post">
-		<label for="acc">帳號:</label><br>
-		<input name="acc" id="acc" type="text"><br>
-		<label for="pwd">密碼:</label><br>
-		<input name="pwd" id="pwd" type="text"><br>
-		<input type="submit" value="登入">
+	<form action="ChangePassword" method="post">
+		<label for="pwd_new">新密碼:</label><br>
+		<input name="pwd_new" id="pwd_new" type="text"><br>
+		<input type="submit" value="送出">
 	</form>
-
-	<script type="text/javascript">
-	</script>
 </body>
 </html>
