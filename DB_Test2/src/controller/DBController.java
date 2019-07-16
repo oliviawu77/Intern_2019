@@ -27,21 +27,6 @@ public class DBController {
 			System.out.println("Error: " + ex);
 		}
 	}
-	public void setData(){
-		//INSERT INTO `crud`.`user` (`id`, `name`, `mail`, `phone`) VALUES 
-		//('4', 'Amy', 'amy3344@yahoo.com.tw', '0934569043');
-		try {
-			String id_new = "'10'";
-			String acc_new = "'coco'";
-			String pwd_new = "'test@example.com'";		
-			System.out.println(st);
-			String query = "INSERT INTO `crud`.`account` (`id`, `name`, `mail`, `phone`) VALUES (" + id_new + ", "+ acc_new +", "+ pwd_new +");";
-			System.out.println(query);
-			st.executeUpdate(query);
-		} catch (Exception ex) {
-			System.out.println(ex);
-		}		
-	}
 
 	public ArrayList<Data> getData() {
 		ArrayList<Data> result=new ArrayList<Data>();
@@ -53,6 +38,10 @@ public class DBController {
 				data.id = rs.getLong("ID");
 				data.acc = rs.getString("Account");
 				data.pwd = rs.getString("Password");
+				data.msg = rs.getString("Message");
+				data.email = rs.getString("Email");
+				data.sex = rs.getString("Sex");
+				data.age = rs.getString("Age");
 				result.add(data);
 			}
 		} catch (Exception ex) {
@@ -79,9 +68,25 @@ public class DBController {
 		}				
 		return pwd_result;
 	}
+	public String  getMsg(String acc){
+		String msg = null;
+		try {
+			String query = "select * from account";
+			rs = st.executeQuery(query);
+			while (rs.next()) {
+				if (acc.equals(rs.getString("Account")))
+				{
+					msg = rs.getString("Message");
+					break;
+				}
+			}
+		} catch (Exception ex) {
+			System.out.println(ex);
+		}				
+		return msg;
+	}	
 
-	public String  changePwd(String acc,String pwd_new){
-		String pwd_result = null;
+	public void  changePwd(String acc,String pwd_new){
 		try {
 			String query = "select * from account";
 			rs = st.executeQuery(query);
@@ -89,7 +94,6 @@ public class DBController {
 				if (acc.equals(rs.getString("Account")))
 				{
 					query = "UPDATE `account` SET Password = '"+ pwd_new +"' WHERE Account = '"+ acc +"' ";
-					System.out.println(query);
 					st.executeUpdate(query);
 					break;
 				}
@@ -97,9 +101,40 @@ public class DBController {
 		} catch (Exception ex) {
 			System.out.println(ex);
 		}				
-		return pwd_result;
+	}
+
+	public void  changeMsg(String acc,String msg){
+		try {
+			String query = "select * from account";
+			rs = st.executeQuery(query);
+			while (rs.next()) {
+				if (acc.equals(rs.getString("Account")))
+				{
+					query = "UPDATE `account` SET Message = '"+ msg +"' WHERE Account = '"+ acc +"' ";
+					st.executeUpdate(query);
+					break;
+				}
+			}
+		} catch (Exception ex) {
+			System.out.println(ex);
+		}				
+	}
+	
+	public void  CreateUser(String acc,String pwd){
+		try {
+			int size = 0;
+			String query = "select * from account";
+			rs = st.executeQuery(query);
+			while (rs.next()) {
+					size++;
+			}
+			size++;
+			query = "INSERT INTO `crud`.`account`(`ID`, `Account`, `Password`, `Message`) VALUE('"+ size +"','"+ acc +"','"+ pwd +"','update')";
+			st.executeUpdate(query);
+
+		} catch (Exception ex) {
+			System.out.println(ex);
+		}				
 	}	
-	
-	
 
 }

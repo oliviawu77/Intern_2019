@@ -11,6 +11,8 @@ C:\workspace_sts4\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\49646524
 \JSP_Ex\src
 C:\workspace_sts4\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3158502581.index
 \DB_Test2\src
+C:\workspace_sts4\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3329375100.index
+\gossip\src
 C:\workspace_sts4\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3870533640.index
 \DB_Test2\src
 C:\workspace_sts4\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\531646903.index

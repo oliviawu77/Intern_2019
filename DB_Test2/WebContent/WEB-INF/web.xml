@@ -4,12 +4,23 @@
   <listener>
 	<listener-class>controller.myLoginListener</listener-class>
   </listener>
+   <filter>
+      <filter-name>MyFilter</filter-name>
+      <filter-class>controller.MyFilter</filter-class>
+    </filter>
+  
+   <filter-mapping>
+    <filter-name>MyFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
   <servlet>
     <servlet-name>MyFirstServlet</servlet-name>
     <servlet-class>controller.MyFirstServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>MyFirstServlet</servlet-name>
-    <url-pattern>/</url-pattern>
-  </servlet-mapping>      
+    <url-pattern>/MyFirstServlet</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
