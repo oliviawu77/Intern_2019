@@ -8,4 +8,5 @@ public class Data {
 	public String email;
 	public String sex;
 	public String age;
+	public String name;
 }

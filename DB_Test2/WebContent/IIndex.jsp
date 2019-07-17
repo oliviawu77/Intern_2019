@@ -10,7 +10,8 @@
 <title>Welcome!${name}</title>
 </head>
 <body>
-<p>${message}</p>
+<h1>${wel_message}</h1>
+<h2>${message}</h2>
 <table>
 	<tr>
 	<td>
@@ -29,6 +30,9 @@
 	<th>
 	ID
 	</th>
+	<th>
+	姓名
+	</th>	
 	<th>
 	帳戶
 	</th>
@@ -52,6 +56,7 @@
 		{
 			out.println("<tr>");
 			out.println("<td>"+temp.get(i).id+"</td>");
+			out.println("<td>"+temp.get(i).name+"</td>");
 			out.println("<td>"+temp.get(i).acc+"</td>");
 			out.println("<td>"+temp.get(i).msg+"</td>");
 			out.println("<td>"+temp.get(i).email+"</td>");

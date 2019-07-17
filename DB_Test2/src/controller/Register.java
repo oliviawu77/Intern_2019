@@ -26,9 +26,22 @@ public class Register extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		db.CreateUser(request.getParameter("acc"),request.getParameter("pwd"));
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	
+		request.setCharacterEncoding("UTF-8");
+		if(!request.getParameter("pwd").equals(request.getParameter("pwd_check")))
+		{
+	  		request.setAttribute("message","密碼比對不正確");
+	  		request.getRequestDispatcher("ErrorPage.jsp").forward(request, response);			
+		}
+		else if(db.AccExists(request.getParameter("acc")))
+		{
+	  		request.setAttribute("message","帳戶已存在");
+	  		request.getRequestDispatcher("ErrorPage.jsp").forward(request, response);			
+		}
+		else {
+		db.CreateUser(request.getParameter("acc"),request.getParameter("pwd"),request.getParameter("mail"),request.getParameter("sex"),request.getParameter("age"),request.getParameter("name"));
 		response.sendRedirect("UI.jsp");
+		}
 	}
 
 }

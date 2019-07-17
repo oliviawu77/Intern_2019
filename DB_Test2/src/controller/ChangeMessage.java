@@ -36,8 +36,8 @@ public class ChangeMessage extends HttpServlet {
 		HttpSession session = request.getSession();
 		String acc = (String) session.getAttribute("name");
 		db.changeMsg(acc, msg_new);
-		
-		request.getRequestDispatcher("IIndex.jsp").forward(request, response);
+		response.sendRedirect("IIndex.jsp");
+		//request.getRequestDispatcher("IIndex.jsp").forward(request, response);
 	}
 
 }

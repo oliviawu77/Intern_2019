@@ -41,7 +41,7 @@ public class MyFilter implements Filter {
 		HttpServletRequest req = (HttpServletRequest) request;
 		String uri = req.getRequestURI();
 		
-		if( !(uri.endsWith("jsp") || uri.endsWith("MyFirstServlet"))){
+		if( !(uri.endsWith("jsp") || uri.endsWith("MyFirstServlet") || uri.endsWith("ChangeMessage") || uri.endsWith("ChangePassword") || uri.endsWith("Register"))){
 			request.getRequestDispatcher("UI.jsp").forward(request, response);
 		}
 		else{

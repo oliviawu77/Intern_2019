@@ -29,8 +29,8 @@ public class ChangePassword extends HttpServlet {
 		String acc = (String) session.getAttribute("name");
 		System.out.println(acc);
 		db.changePwd(acc, pwd_new);
-		
-		request.getRequestDispatcher("IIndex.jsp").forward(request, response);
+		response.sendRedirect("IIndex.jsp");
+		//request.getRequestDispatcher("IIndex.jsp").forward(request, response);
 	}
 
 }
