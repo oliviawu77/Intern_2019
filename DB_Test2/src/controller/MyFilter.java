@@ -41,8 +41,8 @@ public class MyFilter implements Filter {
 		HttpServletRequest req = (HttpServletRequest) request;
 		String uri = req.getRequestURI();
 		
-		if( !(uri.endsWith("jsp") || uri.endsWith("MyFirstServlet") || uri.endsWith("ChangeMessage") || uri.endsWith("ChangePassword") || uri.endsWith("Register"))){
-			request.getRequestDispatcher("UI.jsp").forward(request, response);
+		if( !(uri.endsWith("jsp") || uri.endsWith("MyFirstServlet") ||uri.endsWith("EditUser") || uri.endsWith("Register"))){
+			request.getRequestDispatcher("Login.jsp").forward(request, response);
 		}
 		else{
 			chain.doFilter(request, response);//請filter執行本來應該要執行的servlet

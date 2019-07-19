@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Welcome!${name}</title>
+
 </head>
 <body>
 <h1>${wel_message}</h1>
@@ -15,17 +16,13 @@
 <table>
 	<tr>
 	<td>
-	<input type="button" value="更換密碼" onclick="location.href='ChangePwd.jsp'">
+	<input type="button" value="編輯使用者資料" onclick="location.href='User_edit.jsp'">
 	</td>
-	</tr>
-	<tr>
-	<td>
-	<input type="button" value="更換我的訊息" onclick="location.href='ChangeMsg.jsp'">
-	</td>
-	</tr>	
+	</tr>		
 </table>
 		<p>目前在線人數:${cont}</p>
 	<table style="border:3px #FFD382 dashed;" cellpadding="10" border='1'>
+	<thead>
 	<tr>
 	<th>
 	ID
@@ -48,7 +45,8 @@
 	<th>
 	年齡
 	</th>			
-	</tr>	
+	</tr>
+	</thead>
 	<% 
 		DBController dbc = new DBController();
 		ArrayList<Data> temp = dbc.getData();
@@ -65,7 +63,7 @@
 			out.println("</tr>");
 		}
 	%>
-	</table>		
+	</table><br>		
   <!-- 新增logout button -->
 	<form action='Logout'  method="post">
 		<input name="button" type="submit" id="button" value="登出">

@@ -9,35 +9,32 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class ChangeMessage
+ * Servlet implementation class EditUser
  */
-@WebServlet("/ChangeMessage")
-public class ChangeMessage extends HttpServlet {
+@WebServlet("/EditUser")
+public class EditUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	DBController db = new DBController();        
+	DBController db = new DBController();      
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ChangeMessage() {
+    public EditUser() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		System.out.println(request.getParameter("msg_new"));
-		String msg_new = request.getParameter("msg_new");
-		System.out.println(msg_new);
+		String name = request.getParameter("name");
+		String pwd = request.getParameter("pwd");
+		String msg = request.getParameter("msg");
+		String mail = request.getParameter("mail");
+		String sex = request.getParameter("sex");
+		String age = request.getParameter("age");
 		HttpSession session = request.getSession();
 		String acc = (String) session.getAttribute("name");
-		db.changeMsg(acc, msg_new);
-		response.sendRedirect("IIndex.jsp");
-		//request.getRequestDispatcher("IIndex.jsp").forward(request, response);
+		db.UpdateUser(acc,name,pwd,msg,mail,sex,age);
+		response.sendRedirect("Index.jsp");		
 	}
 
 }

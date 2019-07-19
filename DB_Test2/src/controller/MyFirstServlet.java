@@ -51,7 +51,7 @@ public class MyFirstServlet extends HttpServlet {
 	  			
 	  			Date date = new Date();
 	  			System.out.println(date.toString() + " "+ name + " " + "login");
-	  			request.getRequestDispatcher("IIndex.jsp").forward(request, response);
+	  			request.getRequestDispatcher("Index.jsp").forward(request, response);
 	  			return;
 	  		}
 	  		else //±¡ªp 2

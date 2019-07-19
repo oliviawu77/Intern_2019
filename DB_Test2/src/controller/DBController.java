@@ -121,34 +121,32 @@ public class DBController {
 		return msg;
 	}	
 
-	public void  changePwd(String acc,String pwd_new){
+	public void  UpdateUser(String acc,String name,String pwd,String msg,String mail,String sex,String age){
 		try {
-			String query = "select * from account";
-			rs = st.executeQuery(query);
-			while (rs.next()) {
-				if (acc.equals(rs.getString("Account")))
-				{
-					query = "UPDATE `account` SET Password = '"+ pwd_new +"' WHERE Account = '"+ acc +"' ";
-					st.executeUpdate(query);
-					break;
-				}
+			String query;
+			if(name!=""){
+					query = "UPDATE `account` SET Name = '"+ name +"' WHERE Account = '"+ acc +"' ";
+					st.executeUpdate(query);		
 			}
-		} catch (Exception ex) {
-			System.out.println(ex);
-		}				
-	}
-
-	public void  changeMsg(String acc,String msg){
-		try {
-			String query = "select * from account";
-			rs = st.executeQuery(query);
-			while (rs.next()) {
-				if (acc.equals(rs.getString("Account")))
-				{
-					query = "UPDATE `account` SET Message = '"+ msg +"' WHERE Account = '"+ acc +"' ";
-					st.executeUpdate(query);
-					break;
-				}
+			if(pwd!=""){
+				query = "UPDATE `account` SET Password = '"+ pwd +"' WHERE Account = '"+ acc +"' ";
+				st.executeUpdate(query);		
+			}			
+			if(msg!="") {
+				query = "UPDATE `account` SET Message = '"+ msg +"' WHERE Account = '"+ acc +"' ";
+				st.executeUpdate(query);						
+			}
+			if(mail!="") {
+				query = "UPDATE `account` SET Email = '"+ mail +"' WHERE Account = '"+ acc +"' ";
+				st.executeUpdate(query);						
+			}
+			if(sex!="") {
+				query = "UPDATE `account` SET Sex = '"+ sex +"' WHERE Account = '"+ acc +"' ";
+				st.executeUpdate(query);						
+			}
+			if(age!="") {
+				query = "UPDATE `account` SET Age = '"+ age +"' WHERE Account = '"+ acc +"' ";
+				st.executeUpdate(query);				
 			}
 		} catch (Exception ex) {
 			System.out.println(ex);
