@@ -22,7 +22,6 @@ public class DBController {
 			// 3306|MySQL開放此端口
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/crud", "root", "12345678");
 			st = con.createStatement();
-			
 		} catch (Exception ex) {
 			System.out.println("Error: " + ex);
 		}

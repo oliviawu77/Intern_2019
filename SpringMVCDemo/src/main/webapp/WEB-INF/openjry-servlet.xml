@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+  
+    <!-- 設定 Spring MVC 掃描 tw.url.openjry.controller 套件下是否有 Spring MVC 標註的元件  -->
+    <context:component-scan base-package="tw.url.openjry.controller" />
+    <!-- 使用標註處理 -->
+    <mvc:annotation-driven />
+  
+    <!-- InternalResourceViewResolver 簡化 View 的 URL 路徑設定 -->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <!-- 設定使用 JSTL 做為 View 的解析方式 -->
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+        <!-- View 的路徑前綴 -->
+        <property name="prefix" value="/WEB-INF/jsp/" />
+        <!-- View 的路徑後綴 -->
+        <property name="suffix" value=".jsp" />
+    </bean>
+</beans>

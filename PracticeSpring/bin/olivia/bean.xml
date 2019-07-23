@@ -1,0 +1,16 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 
+	<bean id="iceGun" class="olivia.IceGun"></bean>
+	<bean id="fireGun" class="olivia.FireGun"></bean>
+ 
+	<bean id="role" class="olivia.Role">
+		<constructor-arg value="矮唷~不錯喔" />
+		<property name="gun" ref="iceGun" />
+	</bean>
+</beans>

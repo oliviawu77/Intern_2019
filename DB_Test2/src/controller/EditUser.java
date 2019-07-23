@@ -34,7 +34,7 @@ public class EditUser extends HttpServlet {
 		HttpSession session = request.getSession();
 		String acc = (String) session.getAttribute("name");
 		db.UpdateUser(acc,name,pwd,msg,mail,sex,age);
-		response.sendRedirect("Index.jsp");		
+		response.sendRedirect("index.jsp");		
 	}
 
 }

@@ -32,11 +32,11 @@ public class Register extends HttpServlet {
 		if(db.AccExists(request.getParameter("acc")))
 		{
 	  		request.setAttribute("message","±b¤á¤w¦s¦b");
-	  		request.getRequestDispatcher("ErrorPage.jsp").forward(request, response);			
+	  		request.getRequestDispatcher("errorPage.jsp").forward(request, response);			
 		}
 		else {
 		db.CreateUser(request.getParameter("acc"),request.getParameter("pwd"),request.getParameter("mail"),request.getParameter("sex"),request.getParameter("age"),request.getParameter("name"));
-		response.sendRedirect("Login.jsp");
+		response.sendRedirect("login.jsp");
 		}
 	}
 

@@ -126,7 +126,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="DB_Test2" path="/DB_Test2" reloadable="true" source="org.eclipse.jst.jee.server:DB_Test2"/><Context docBase="MyFirstServelet" path="/MyFirstServelet" reloadable="true" source="org.eclipse.jst.jee.server:MyFirstServelet"/><Context docBase="pet" path="/pet" reloadable="true" source="org.eclipse.jst.jee.server:pet"/><Context docBase="jsp_ex2" path="/jsp_ex2" reloadable="true" source="org.eclipse.jst.jee.server:jsp_ex2"/><Context docBase="DB_jsp" path="/DB_jsp" reloadable="true" source="org.eclipse.jst.jee.server:DB_jsp"/></Host>
+      <Context docBase="StaticPages" path="/StaticPages" reloadable="true" source="org.eclipse.jst.jee.server:StaticPages"/><Context docBase="PageRedirection" path="/PageRedirection" reloadable="true" source="org.eclipse.jst.jee.server:PageRedirection"/><Context docBase="Password_Spring" path="/Password_Spring" reloadable="true" source="org.eclipse.jst.jee.server:Password_Spring"/><Context docBase="SpringMVCDemo" path="/SpringMVCDemo" reloadable="true" source="org.eclipse.jst.j2ee.server:SpringMVCDemo"/></Host>
     </Engine>
   </Service>
 </Server>

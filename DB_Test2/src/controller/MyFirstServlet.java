@@ -47,24 +47,24 @@ public class MyFirstServlet extends HttpServlet {
 	  			HttpSession session = request.getSession();
 	  			session.setAttribute("name",name);
 	  			
-	  			request.setAttribute("cont",myLoginListener.GetSessions());
+	  			request.setAttribute("cont",LoginListener.GetSessions());
 	  			
 	  			Date date = new Date();
 	  			System.out.println(date.toString() + " "+ name + " " + "login");
-	  			request.getRequestDispatcher("Index.jsp").forward(request, response);
+	  			request.getRequestDispatcher("index.jsp").forward(request, response);
 	  			return;
 	  		}
 	  		else //情況 2
 	  		{
 		  		request.setAttribute("message","密碼錯誤");
-		  		request.getRequestDispatcher("ErrorPage.jsp").forward(request, response);
+		  		request.getRequestDispatcher("error.jsp").forward(request, response);
 		  		return;	  			
 	  		}
 	   	}
 	  	 else //情況3
 	  	 {
 		  	request.setAttribute("message","使用者不存在");
-		  	request.getRequestDispatcher("ErrorPage.jsp").forward(request, response);
+		  	request.getRequestDispatcher("error.jsp").forward(request, response);
 		  	return;
 	  	 }
 	}

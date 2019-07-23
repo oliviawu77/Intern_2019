@@ -42,7 +42,7 @@ public class MyFilter implements Filter {
 		String uri = req.getRequestURI();
 		
 		if( !(uri.endsWith("jsp") || uri.endsWith("MyFirstServlet") ||uri.endsWith("EditUser") || uri.endsWith("Register"))){
-			request.getRequestDispatcher("Login.jsp").forward(request, response);
+			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
 		else{
 			chain.doFilter(request, response);//請filter執行本來應該要執行的servlet
