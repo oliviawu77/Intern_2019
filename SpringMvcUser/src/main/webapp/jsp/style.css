@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+	body{
+		background-color: #8EC5FC;
+		background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+	
+	.button_index{
+	  background-color: #8EC5FC; /* Green */
+	  border: none;
+	  color: #8EC5FC;
+	  padding: 16px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 4px 2px;
+	  -webkit-transition-duration: 0.4s; /* Safari */
+	  transition-duration: 0.4s;
+	  cursor: pointer;
+	  font-family: 'Noto Sans TC', sans-serif;
+	}
+	
+	.button {
+	  background-color: #8EC5FC; /* Green */
+	  border: none;
+	  color: #8EC5FC;
+	  padding: 2px 16px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 12px;
+	  margin: 4px 2px;
+	  -webkit-transition-duration: 0.4s; /* Safari */
+	  transition-duration: 0.4s;
+	  cursor: pointer;
+	  font-family: 'Noto Sans TC', sans-serif;
+	}	
+	
+	.button1 {
+	  background-color: #E0C3FC; 
+	  color: white; 
+	  border: 2px solid #E0C3FC;
+	}
+	
+	.button1:hover {
+	  background-color: white;
+	  color: #8EC5FC;
+	}
