@@ -19,9 +19,8 @@ public class IndexController {
   UserService userService;
 
   @RequestMapping(value = "/home", method = RequestMethod.GET)
-  public ModelAndView showLogin(HttpServletRequest request, HttpServletResponse response) {
+  public ModelAndView showHome(HttpServletRequest request, HttpServletResponse response) {
     ModelAndView mav = new ModelAndView("home");
     return mav;
   }
-
 }

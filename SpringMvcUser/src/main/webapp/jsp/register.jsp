@@ -61,7 +61,7 @@
 
 </head>
 <body>
-	<form:form id="regForm" name="regForm" modelAttribute="user" action="registerProcess"
+	<form:form id="regForm" name="regForm"  modelAttribute="user" action="registerProcess"
 		method="post" onsubmit="return check()">
 
 		<table>
@@ -90,11 +90,11 @@
 				<td><form:input path="email" name="email" id="email" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="sex">性別：</form:label></td>
-				<td><form:input path="sex" name="sex" id="sex" /></td>
+				<td>性別：</td>
+				<td><form:radiobutton path="sex" name="sex" id="sex" value="M" label="男" /><form:radiobutton path="sex" name="sex" id="sex" value="F" label="女" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="age">年齡:</form:label></td>
+				<td><form:label path="age">年齡：</form:label></td>
 				<td><form:input path="age" name="age" id="age" /></td>
 			</tr>
 

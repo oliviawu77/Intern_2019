@@ -2,7 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ page import="controller.DBController" %>
 <%@ page import="controller.Data" %>
-<%@ page import="java.util.ArrayList" %>    
+<%@ page import="java.util.ArrayList" %>
+
 <!DOCTYPE html>
 <html>
 <head>

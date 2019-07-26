@@ -15,7 +15,6 @@
 		<table align="center">
 			<tr>
 				<td><form:label path="username">帳號: </form:label></td>
-				<!--<td><form:input path="username" name="username" id="username" /></td>-->
 				<td><input type='text' name="username" id="username" /></td>
 			</tr>
 			<tr>

@@ -6,6 +6,7 @@ import jbr.springmvc.model.User;
 public interface UserDao {
 
   void register(User user);
-
+  void update(User user);
+  
   User validateUser(Login login);
 }
