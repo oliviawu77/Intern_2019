@@ -6,7 +6,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="org.springframework.context.ApplicationContext" %>
 <%@ page import="org.springframework.context.support.ClassPathXmlApplicationContext" %>
-
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -18,19 +19,10 @@
 <%   
 	ApplicationContext context = new ClassPathXmlApplicationContext("classpath:jbr/config/user-beans.xml");
 	UserDaoImpl userDao = (UserDaoImpl) context.getBean("userDao");
+    List<User> users = userDao.getUserList();
  %>
-	<table>
-		<tr>
-			<td>Welcome!${sex_msg} ${name}</td>
-		</tr>
-		<tr>
-		</tr>
-		<tr>
-		</tr>
-		<tr>
-			<td><input type="button" id="return" value="編輯使用者" name="return"  class="button button1" onclick="location.href='edit'"></td>			
-		</tr>		
-		<tr>
+
+	<h1>Welcome!${name}</h1>
 	<table style="border:3px #FFD382 dashed;" cellpadding="10" border='1'>
 	<thead>
 	<tr>
@@ -54,12 +46,13 @@
 	</th>
 	<th>
 	年齡
-	</th>			
+	</th>
+	<th>
+	</th>				
 	</tr>
 	</thead>
+	<tbody>
 	<% 
-    List<User> users = userDao.getUserList();
-    
     for (User record : users) {
 		out.println("<tr>");
 		out.println("<td>"+record.getId()+"</td>");
@@ -69,12 +62,15 @@
 		out.println("<td>"+record.getEmail()+"</td>");
 		out.println("<td>"+record.getSex()+"</td>");
 		out.println("<td>"+record.getAge()+"</td>");
+		String mystr=new String("<a href='edit?acc="+record.getAcc()+"'>編輯</a>");
+		out.println("<td>"+mystr+"</td>");		
 		out.println("</tr>");
     	}
 	%>
-	</table><br>		
-			<td><input type="button" id="return" value="登出" name="return"  class="button button1" onclick="location.href='home'"></td>
-		</tr>
-	</table>
+	</tbody>
+	</table><br>
+	<input type="button" id="return" value="登出" name="return"  class="button button1" onclick="location.href='home.html'">
+		
+
 </body>
 </html>

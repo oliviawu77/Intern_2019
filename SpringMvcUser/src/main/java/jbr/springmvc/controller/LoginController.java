@@ -1,5 +1,10 @@
 package jbr.springmvc.controller;
 
+import jbr.springmvc.dao.UserDaoImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -34,7 +39,11 @@ public class LoginController {
     ModelAndView mav = null;
 
     User user = userService.validateUser(login);
-
+    
+    ApplicationContext context = new ClassPathXmlApplicationContext("classpath:jbr/config/user-beans.xml");
+    UserDaoImpl userDao = (UserDaoImpl) context.getBean("userDao");;
+    List<User> users = userDao.getUserList();
+ 
     if (null != user) {
       mav = new ModelAndView("welcome");
       mav.addObject("name", user.getName());

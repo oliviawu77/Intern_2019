@@ -25,7 +25,7 @@
 			<tr>
 				<td></td>
 				<td align="left"><form:button id="login" name="login"  class="button button1">登入</form:button>
-				<input type="button" id="return" value="返回" name="return"  class="button button1" onclick="location.href='home'"></td>
+				<input type="button" id="return" value="返回" name="return"  class="button button1" onclick="location.href='home.html'"></td>
 			</tr>
 		</table>
 	</form:form>

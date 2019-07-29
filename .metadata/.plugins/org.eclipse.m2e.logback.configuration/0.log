@@ -2200,3 +2200,120 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact mysql:mysql-c
 2019-07-26 17:03:41,475 [Worker-185: Launching SpringMvcUser] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
 2019-07-26 17:03:41,477 [Worker-185: Launching SpringMvcUser] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-07-26 17:03:41,478 [Worker-185: Launching SpringMvcUser] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-07-27 22:00:58,601 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-07-28 19:20:21,405 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-07-28 22:09:20,740 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-07-29 10:20:01,520 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-07-29 11:36:35,694 [Worker-20: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringMvcUser
+2019-07-29 11:36:43,761 [Worker-35: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 11:36:43,781 [Worker-35: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-07-29 11:36:43,836 [Worker-35: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 11:36:43,836 [Worker-35: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-07-29 11:36:43,841 [Worker-35: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringMvcUser
+2019-07-29 11:36:43,841 [Worker-35: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringMvcUser
+2019-07-29 11:36:44,240 [Worker-35: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 12:43:32,990 [Worker-49: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringMvcUser
+2019-07-29 12:43:35,803 [Worker-48: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 12:43:35,804 [Worker-48: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-07-29 12:43:35,816 [Worker-48: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 12:43:35,817 [Worker-48: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-07-29 12:43:35,817 [Worker-48: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringMvcUser
+2019-07-29 12:43:35,817 [Worker-48: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringMvcUser
+2019-07-29 12:43:35,945 [Worker-48: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:00:05,659 [Worker-98: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringMvcUser
+2019-07-29 15:00:14,576 [Worker-99: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:00:14,576 [Worker-99: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-07-29 15:00:14,600 [Worker-99: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:00:14,601 [Worker-99: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-07-29 15:00:14,602 [Worker-99: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringMvcUser
+2019-07-29 15:00:14,602 [Worker-99: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringMvcUser
+2019-07-29 15:00:21,805 [Worker-99: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:12:20,637 [Worker-107: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringMvcUser
+2019-07-29 15:12:22,304 [Worker-111: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:12:22,306 [Worker-111: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-07-29 15:12:22,356 [Worker-111: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:12:22,357 [Worker-111: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-07-29 15:12:22,357 [Worker-111: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringMvcUser
+2019-07-29 15:12:22,357 [Worker-111: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringMvcUser
+2019-07-29 15:12:23,047 [Worker-111: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:15:04,386 [Worker-112: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringMvcUser
+2019-07-29 15:15:05,137 [Worker-97: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:15:05,139 [Worker-97: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-07-29 15:15:05,148 [Worker-97: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:15:05,149 [Worker-97: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-07-29 15:15:05,150 [Worker-97: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringMvcUser
+2019-07-29 15:15:05,150 [Worker-97: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringMvcUser
+2019-07-29 15:15:05,155 [Worker-97: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:26:50,643 [Worker-124: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringMvcUser
+2019-07-29 15:26:51,659 [Worker-115: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:26:51,660 [Worker-115: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-07-29 15:26:51,728 [Worker-115: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:26:51,729 [Worker-115: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-07-29 15:26:51,729 [Worker-115: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringMvcUser
+2019-07-29 15:26:51,729 [Worker-115: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringMvcUser
+2019-07-29 15:26:51,767 [Worker-115: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:29:49,236 [Worker-121: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringMvcUser
+2019-07-29 15:29:50,505 [Worker-128: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:29:50,534 [Worker-128: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-07-29 15:29:50,639 [Worker-128: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:29:50,640 [Worker-128: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-07-29 15:29:50,673 [Worker-128: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringMvcUser
+2019-07-29 15:29:50,673 [Worker-128: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringMvcUser
+2019-07-29 15:29:50,737 [Worker-128: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:38:44,401 [Worker-123: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringMvcUser
+2019-07-29 15:38:45,743 [Worker-128: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:38:45,744 [Worker-128: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-07-29 15:38:45,830 [Worker-128: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:38:45,831 [Worker-128: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-07-29 15:38:45,832 [Worker-128: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringMvcUser
+2019-07-29 15:38:45,833 [Worker-128: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringMvcUser
+2019-07-29 15:38:45,868 [Worker-128: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:57:10,103 [Worker-132: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringMvcUser
+2019-07-29 15:57:10,892 [Worker-124: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:57:10,893 [Worker-124: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-07-29 15:57:10,931 [Worker-124: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:57:10,931 [Worker-124: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-07-29 15:57:10,931 [Worker-124: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringMvcUser
+2019-07-29 15:57:10,931 [Worker-124: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringMvcUser
+2019-07-29 15:57:10,937 [Worker-124: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:58:13,974 [Worker-135: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringMvcUser
+2019-07-29 15:58:14,663 [Worker-134: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:58:14,665 [Worker-134: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-07-29 15:58:14,689 [Worker-134: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 15:58:14,690 [Worker-134: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-07-29 15:58:14,691 [Worker-134: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringMvcUser
+2019-07-29 15:58:14,691 [Worker-134: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringMvcUser
+2019-07-29 15:58:14,696 [Worker-134: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 16:06:18,528 [Worker-129: Cleaning all projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: jbr:SpringMvcUser:0.1 @ C:\workspace_sts4\SpringMvcUser\pom.xml.
+2019-07-29 16:06:24,178 [Worker-129: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringMvcUser
+2019-07-29 16:06:27,675 [Worker-132: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 16:06:27,677 [Worker-132: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-07-29 16:06:27,784 [Worker-132: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 16:06:27,784 [Worker-132: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-07-29 16:06:27,785 [Worker-132: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringMvcUser
+2019-07-29 16:06:27,797 [Worker-132: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringMvcUser
+2019-07-29 16:06:27,804 [Worker-132: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 16:11:07,349 [Worker-147: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringMvcUser
+2019-07-29 16:11:09,497 [Worker-151: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 16:11:09,498 [Worker-151: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-07-29 16:11:09,511 [Worker-151: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 16:11:09,512 [Worker-151: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-07-29 16:11:09,513 [Worker-151: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringMvcUser
+2019-07-29 16:11:09,513 [Worker-151: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringMvcUser
+2019-07-29 16:11:09,519 [Worker-151: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 16:20:16,313 [Worker-162: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringMvcUser
+2019-07-29 16:20:17,119 [Worker-151: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 16:20:17,120 [Worker-151: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-07-29 16:20:17,131 [Worker-151: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 16:20:17,131 [Worker-151: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-07-29 16:20:17,132 [Worker-151: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringMvcUser
+2019-07-29 16:20:17,133 [Worker-151: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringMvcUser
+2019-07-29 16:20:17,137 [Worker-151: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 16:43:45,074 [Worker-148: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringMvcUser
+2019-07-29 16:43:45,929 [Worker-177: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 16:43:45,930 [Worker-177: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-07-29 16:43:45,942 [Worker-177: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-07-29 16:43:45,943 [Worker-177: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-07-29 16:43:45,943 [Worker-177: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringMvcUser
+2019-07-29 16:43:45,944 [Worker-177: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringMvcUser
+2019-07-29 16:43:45,949 [Worker-177: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.

@@ -91,7 +91,7 @@
 			</tr>
 			<tr>
 				<td>性別：</td>
-				<td><form:radiobutton path="sex" name="sex" id="sex" value="M" label="男" /><form:radiobutton path="sex" name="sex" id="sex" value="F" label="女" /></td>
+				<td><form:radiobutton path="sex" name="sex" id="sex" value="male" label="男" /><form:radiobutton path="sex" name="sex" id="sex" value="female" label="女" /></td>
 			</tr>
 			<tr>
 				<td><form:label path="age">年齡：</form:label></td>
@@ -101,7 +101,7 @@
 			<tr>
 				<td></td>
 				<td><form:button id="register" name="register" class="button button1">註冊</form:button>
-				<input type="button" id="return" value="返回" name="return"  class="button button1" onclick="location.href='home'"></td>
+				<input type="button" id="return" value="返回" name="return"  class="button button1" onclick="location.href='home.html'"></td>
 				
 			</tr>
 

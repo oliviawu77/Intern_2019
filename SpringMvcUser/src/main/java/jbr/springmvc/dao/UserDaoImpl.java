@@ -22,11 +22,21 @@ public class UserDaoImpl implements UserDao {
   @Autowired
   JdbcTemplate jdbcTemplate;
 
+  public void delete(User user) {
+	  try {
+	        String sql = "delete account where Account = ?";
+	        System.out.println(sql);
+	        jdbcTemplate.update(sql, new Object[] {user.getAcc()});
+	  }
+	  catch (Exception ex) {
+			System.out.println(ex);
+		}	  
+  };
 
   public void register(User user) {
 	  try {
 	        String sql = "insert into account values(?,?,?,?,?,?,?,?)";
-
+	        System.out.println(sql);
 	        jdbcTemplate.update(sql, new Object[] { user.getId(), user.getAcc(), user.getPwd(), "null",
 				  user.getEmail(), user.getSex(), user.getAge(), user.getName() });
 	  }
@@ -39,35 +49,28 @@ public class UserDaoImpl implements UserDao {
   public void update(User user) {
 	  try {
 			String sql = null;
-			System.out.println(sql+"this is test");
 	        if(user.getName()!=""){
 	        	sql = "UPDATE `account` SET Name = '"+ user.getName() +"' WHERE Account = '"+ user.getAcc() +"' ";
-	        	System.out.println(sql);
 	        	jdbcTemplate.update(sql);		
 	        	}
 	        if(user.getPwd()!=""){
-	        	sql = "UPDATE `account` SET Name = '"+ user.getPwd() +"' WHERE Account = '"+ user.getAcc() +"' ";
-	        	System.out.println(sql);
+	        	sql = "UPDATE `account` SET Password = '"+ user.getPwd() +"' WHERE Account = '"+ user.getAcc() +"' ";
 	        	jdbcTemplate.update(sql);		
 	        	}
 	        if(user.getMsg()!=""){
-	        	sql = "UPDATE `account` SET Name = '"+ user.getMsg() +"' WHERE Account = '"+ user.getAcc() +"' ";
-	        	System.out.println(sql);
+	        	sql = "UPDATE `account` SET Message = '"+ user.getMsg() +"' WHERE Account = '"+ user.getAcc() +"' ";
 	        	jdbcTemplate.update(sql);		
 	        	}
 	        if(user.getEmail()!=""){
-	        	sql = "UPDATE `account` SET Name = '"+ user.getEmail() +"' WHERE Account = '"+ user.getAcc() +"' ";
-	        	System.out.println(sql);
+	        	sql = "UPDATE `account` SET Email = '"+ user.getEmail() +"' WHERE Account = '"+ user.getAcc() +"' ";
 	        	jdbcTemplate.update(sql);		
 	        	}
-	        if(user.getSex()!=""){
-	        	sql = "UPDATE `account` SET Name = '"+ user.getSex() +"' WHERE Account = '"+ user.getAcc() +"' ";
-	        	System.out.println(sql);
+	        if(user.getSex()!="null"){
+	        	sql = "UPDATE `account` SET Sex = '"+ user.getSex() +"' WHERE Account = '"+ user.getAcc() +"' ";
 	        	jdbcTemplate.update(sql);		
 	        	}
 	        if(user.getAge()!=""){
-	        	sql = "UPDATE `account` SET Name = '"+ user.getAge() +"' WHERE Account = '"+ user.getAcc() +"' ";
-	        	System.out.println(sql);
+	        	sql = "UPDATE `account` SET Age = '"+ user.getAge() +"' WHERE Account = '"+ user.getAcc() +"' ";
 	        	jdbcTemplate.update(sql);		
 	        	}		        
 	  }
@@ -96,7 +99,7 @@ public class UserDaoImpl implements UserDao {
   public String getSex(Login login) {
 	  	String sex = null;
 	    String sql = "select Sex from account where Account='" + login.getUsername();
-
+	    
 	    List<User> users = jdbcTemplate.query(sql, new UserMapper());
 
 	    return sex;

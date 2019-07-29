@@ -12,11 +12,14 @@ public class UserServiceImpl implements UserService {
   public UserDao userDao;
 
   public void register(User user) {
-	    userDao.update(user);
+	    userDao.register(user);
 	  }
   public void update(User user) {
 	    userDao.update(user);
 	  }
+  public void delete(User user) {
+	  userDao.delete(user);
+  	};    
   public User validateUser(Login login) {
     return userDao.validateUser(login);
   }

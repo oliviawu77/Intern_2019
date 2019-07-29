@@ -1,5 +1,7 @@
 package jbr.springmvc.controller;
 
+import java.io.UnsupportedEncodingException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -21,18 +23,26 @@ public class UserEditController {
 
   @RequestMapping(value = "/edit", method = RequestMethod.GET)
   public ModelAndView showUpdate(HttpServletRequest request, HttpServletResponse response) {
-    ModelAndView mav = new ModelAndView("userEdit");
+    
+	ModelAndView mav = new ModelAndView("userEdit");
     mav.addObject("user", new User());
 
     return mav;
   }
 
-  @RequestMapping(value = "/UserEditProcess", method = RequestMethod.POST)
+  @RequestMapping(value = "/userEditProcess", method = RequestMethod.POST)
   public ModelAndView updateUser(HttpServletRequest request, HttpServletResponse response,
-      @ModelAttribute("user") User user, @ModelAttribute("login") Login login) {
-	  
+      @ModelAttribute("user") User user, @ModelAttribute("login") Login login){  
 	  	userService.update(user);
 
 	  	return new ModelAndView("login");
   }
+ 
+  @RequestMapping(value = "/userDeleteProcess", method = RequestMethod.POST)
+  public ModelAndView deleteUser(HttpServletRequest request, HttpServletResponse response,
+      @ModelAttribute("user") User user, @ModelAttribute("login") Login login){  
+	  	userService.delete(user);
+
+	  	return new ModelAndView("login");
+  }  
 }
