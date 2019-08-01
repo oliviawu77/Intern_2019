@@ -2,7 +2,6 @@ package jbr.springmvc.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Iterator;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -24,8 +23,7 @@ public class UserDaoImpl implements UserDao {
 
   public void delete(User user) {
 	  try {
-	        String sql = "delete account where Account = ?";
-	        System.out.println(sql);
+	        String sql = "delete from account where Account = ?";
 	        jdbcTemplate.update(sql, new Object[] {user.getAcc()});
 	  }
 	  catch (Exception ex) {
@@ -35,9 +33,11 @@ public class UserDaoImpl implements UserDao {
 
   public void register(User user) {
 	  try {
-	        String sql = "insert into account values(?,?,?,?,?,?,?,?)";
-	        System.out.println(sql);
-	        jdbcTemplate.update(sql, new Object[] { user.getId(), user.getAcc(), user.getPwd(), "null",
+		  	String sql = "SELECT MAX(ID) FROM ACCOUNT";
+		  	int tmp_id = jdbcTemplate.queryForObject(sql,Integer.class) + 1;
+		  	
+	        sql = "insert into account values(?,?,?,?,?,?,?,?)";
+	        jdbcTemplate.update(sql, new Object[] { tmp_id, user.getAcc(), user.getPwd(), "null",
 				  user.getEmail(), user.getSex(), user.getAge(), user.getName() });
 	  }
 	  catch (Exception ex) {
@@ -95,15 +95,6 @@ public class UserDaoImpl implements UserDao {
 
     return users.size() > 0 ? users.get(0) : null;
   }
-
-  public String getSex(Login login) {
-	  	String sex = null;
-	    String sql = "select Sex from account where Account='" + login.getUsername();
-	    
-	    List<User> users = jdbcTemplate.query(sql, new UserMapper());
-
-	    return sex;
-	  }
 
 class UserMapper implements RowMapper<User> {
 

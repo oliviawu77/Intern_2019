@@ -17,6 +17,7 @@
             <param-value>true</param-value>
         </init-param>
     </filter>
+    
     <filter-mapping>
         <filter-name>characterEncodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
@@ -44,12 +45,13 @@
 	</servlet-mapping>
 
 
-	<!-- <context-param>
+	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/spring-mvc-servlet.xml</param-value>
 	</context-param>
 
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener> -->
+	</listener> 
+	
 </web-app>

@@ -65,6 +65,6 @@
 		<item key="DIALOG_HEIGHT" value="527"/>
 		<item key="BUILD_NOW" value="true"/>
 		<item key="BUILD_ALL" value="true"/>
-		<item key="TOGGLE_SELECTED" value="false"/>
+		<item key="TOGGLE_SELECTED" value="true"/>
 	</section>
 </section>

@@ -39,19 +39,26 @@ public class LoginController {
     ModelAndView mav = null;
 
     User user = userService.validateUser(login);
-    
-    ApplicationContext context = new ClassPathXmlApplicationContext("classpath:jbr/config/user-beans.xml");
-    UserDaoImpl userDao = (UserDaoImpl) context.getBean("userDao");;
-    List<User> users = userDao.getUserList();
- 
+   
     if (null != user) {
+      ApplicationContext context = new ClassPathXmlApplicationContext("classpath:jbr/config/user-beans.xml");
+      UserDaoImpl userDao = (UserDaoImpl) context.getBean("userDao");;
+      
       mav = new ModelAndView("welcome");
       mav.addObject("name", user.getName());
+      String sex = user.getSex();
+      System.out.println(user.getSex());
+      if(sex.equals("male")) {
+    	  mav.addObject("sex_msg", "Mr. ");
+      }
+      else if(sex.equals("female")) {
+    	  mav.addObject("sex_msg", "Ms .");
+      }
+      mav.addObject("userlist", userDao.getUserList());
     } else {
       mav = new ModelAndView("login");
-      mav.addObject("message", "±b¸¹©Î±K½X¿ù»~!!");
+      mav.addObject("message", "Error!");
     }
-
     return mav;
   }
 
