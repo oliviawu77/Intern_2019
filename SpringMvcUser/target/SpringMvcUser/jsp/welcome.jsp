@@ -14,7 +14,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel=stylesheet type="text/css" href="jsp/style.css">
-<title>Welcome</title>
+<title><spring:message code="welcome_title" /></title>
 </head>
 <body>
 	<h1>Welcome!${sex_msg}${name}</h1>
@@ -22,25 +22,25 @@
 	<thead>
 	<tr>
 	<th>
-	ID
+	<spring:message code="welcome_id" />
 	</th>
 	<th>
-	姓名
+	<spring:message code="welcome_name" />
 	</th>	
 	<th>
-	帳戶
+	<spring:message code="welcome_account" />
 	</th>
 	<th>
-	訊息
+	<spring:message code="welcome_message" />
 	</th>
 	<th>
-	電子郵件
+	<spring:message code="welcome_email" />
 	</th>
 	<th>
-	性別
+	<spring:message code="welcome_sex" />
 	</th>
 	<th>
-	年齡
+	<spring:message code="welcome_age" />
 	</th>
 	<th>
 	</th>				
@@ -54,9 +54,18 @@
 	   <td>${list.acc}</td>  
 	   <td>${list.msg}</td>
 	   <td>${list.email}</td>
-	   <td>${list.sex}</td>
+	   <td>
+	   		<c:choose>
+			  <c:when test="${list.sex=='male'}">
+			  		<img src="jsp\masculine.png" height=30px width=30px/>
+			   </c:when>
+			   <c:when test="${list.sex=='female'}">
+			   		<img src="jsp\femenine.png" height=30px width=30px/>
+			   </c:when>	   		
+	   		</c:choose>
+	   </td>
 	   <td>${list.age}</td>
-	   <td><a href="edit?acc=${list.acc}">編輯</a></td>
+	   <td><a href="edit?acc=${list.acc}"><spring:message code="welcome_edit" /></a></td>
 	   </tr>
 	   </c:forEach>    	
 	</tbody>

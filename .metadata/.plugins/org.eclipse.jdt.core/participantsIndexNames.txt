@@ -35,6 +35,8 @@ C:\workspace_sts4\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\52686801
 \SpringMVCPagination\src\main\java
 C:\workspace_sts4\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3870533640.index
 \DB_Test2\src
+C:\workspace_sts4\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3039300494.index
+\SpringExample\src\main\resources
 C:\workspace_sts4\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3773545927.index
 \SpringMvcUser\src\main\java
 C:\workspace_sts4\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2442159035.index

@@ -47,7 +47,6 @@ public class LoginController {
       mav = new ModelAndView("welcome");
       mav.addObject("name", user.getName());
       String sex = user.getSex();
-      System.out.println(user.getSex());
       if(sex.equals("male")) {
     	  mav.addObject("sex_msg", "Mr. ");
       }
