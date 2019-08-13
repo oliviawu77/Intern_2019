@@ -28,19 +28,19 @@
 
 		var age = document.getElementById("age").value;
 
-		if(checkEmail(document.regForm.email.value))
+		if(password!=repassword){
+		    window.alert("密碼不一致！");
+		    return false;
+		    }
+		else if(age > 99 | age < 0){
+			alert("年齡範圍錯誤！");
+			return false;
+			}
+		else if(checkEmail(document.edit_form.email.value)&document.edit_form.email.value!="")
 		{
 			alert("Email 格式錯誤！");
 			return false;
-			}
-		else if(password!=repassword){
-		    window.alert("密碼不一致！");
-		    return false;
-		    }        		
-		else if ((age > 99 | age < 1) & (age != 0)){
-			alert("年齡超過範圍(1~99)！");
-			return false;	
-		}		
+			}			
 		else{
 			if(confirm("資料即將送出")){
 				alert("資料修改成功！");
@@ -49,9 +49,17 @@
 			else{
 				alert("修改已取消！");
 				return false;
-				}			
+				}
+		}			
 		}
+	
+	function checkEmail(remail) {
+		if (remail.search(/^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/)!=-1) {
+			return false;
+		} else {
+		  return true;
 		}
+	}	
 	
 	function delete_check(){
 		if(confirm("確定刪除此使用者嗎？")){
@@ -113,7 +121,6 @@
 
 			<tr>
 				<td><form:button id="register" name="register" class="button button1"><spring:message code="edit_submit" /></form:button>
-				<input type="button" id="return" value="<<" name="return"  class="button button1" onclick="location.href='welcome'"></td>
 			</tr>
 
 		</table>
@@ -124,7 +131,7 @@
 			<tr>
 				<form:label path="acc"></form:label>
 				<form:input type="hidden" path="acc" name="acc" id="acc" value="${param['acc']}" readonly="true"/>
-				<form:button id="register" name="register" class="button button1"><spring:message code="edit_delete" /></form:button>
+				<form:button id="delete" name="delete" class="button button1"><spring:message code="edit_delete" /></form:button>
 			</tr>			
 		</table>	
 	</form:form>

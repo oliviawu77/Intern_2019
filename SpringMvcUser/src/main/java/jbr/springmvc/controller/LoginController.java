@@ -42,7 +42,7 @@ public class LoginController {
    
     if (null != user) {
       ApplicationContext context = new ClassPathXmlApplicationContext("classpath:jbr/config/user-beans.xml");
-      UserDaoImpl userDao = (UserDaoImpl) context.getBean("userDao");;
+      UserDaoImpl userDao = (UserDaoImpl) context.getBean("userDao");
       
       mav = new ModelAndView("welcome");
       mav.addObject("name", user.getName());

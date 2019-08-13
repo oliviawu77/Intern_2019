@@ -1,5 +1,6 @@
 C:\workspace_sts4\SpringMvcUser\src\main\java\jbr\springmvc\dao\UserDaoImpl.java
 C:\workspace_sts4\SpringMvcUser\src\main\java\jbr\springmvc\model\User.java
+C:\workspace_sts4\SpringMvcUser\src\main\java\jbr\springmvc\controller\UploadFileController.java
 C:\workspace_sts4\SpringMvcUser\src\main\java\jbr\springmvc\controller\LoginController.java
 C:\workspace_sts4\SpringMvcUser\src\main\java\jbr\springmvc\service\UserServiceImpl.java
 C:\workspace_sts4\SpringMvcUser\src\main\java\jbr\springmvc\controller\RegistrationController.java
@@ -7,3 +8,4 @@ C:\workspace_sts4\SpringMvcUser\src\main\java\jbr\springmvc\controller\UserEditC
 C:\workspace_sts4\SpringMvcUser\src\main\java\jbr\springmvc\model\Login.java
 C:\workspace_sts4\SpringMvcUser\src\main\java\jbr\springmvc\service\UserService.java
 C:\workspace_sts4\SpringMvcUser\src\main\java\jbr\springmvc\dao\UserDao.java
+C:\workspace_sts4\SpringMvcUser\src\main\java\jbr\springmvc\model\Employee.java

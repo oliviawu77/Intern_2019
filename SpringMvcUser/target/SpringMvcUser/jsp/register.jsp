@@ -55,7 +55,7 @@
 				alert("請填年齡！");
 				return false;				
 			}
-			else if (age > 99 | age < 1){
+			else if (age > 99 | age < 0){
 				alert("年齡超過範圍(1~99)！");
 				return false;	
 			}		

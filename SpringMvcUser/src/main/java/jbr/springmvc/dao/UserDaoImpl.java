@@ -12,6 +12,7 @@ import org.springframework.jdbc.core.RowMapper;
 
 import jbr.springmvc.model.Login;
 import jbr.springmvc.model.User;
+import jbr.springmvc.model.Employee;
 
 public class UserDaoImpl implements UserDao {
 
@@ -20,6 +21,18 @@ public class UserDaoImpl implements UserDao {
 
   @Autowired
   JdbcTemplate jdbcTemplate;
+  
+  public void updateEmployee(Employee employee) {
+	  try {
+		  	String sql = null;
+	        sql = "insert into `employee` values(?,?,?,?,?,?,?)";
+	        jdbcTemplate.update(sql, new Object[] {employee.getId(), employee.getJob_grade(), employee.getJob_position(), 
+	        		employee.getWork_shift(), employee.getExercise_date(), employee.getExercise_week(), employee.getStep() });
+	  }
+	  catch (Exception ex) {
+			System.out.println(ex);
+		}	  	  
+  };
 
   public void delete(User user) {
 	  try {
@@ -49,6 +62,7 @@ public class UserDaoImpl implements UserDao {
   public void update(User user) {
 	  try {
 			String sql = null;
+			String sex = user.getSex();			
 	        if(user.getName()!=""){
 	        	sql = "UPDATE `account` SET Name = '"+ user.getName() +"' WHERE Account = '"+ user.getAcc() +"' ";
 	        	jdbcTemplate.update(sql);		
@@ -65,10 +79,14 @@ public class UserDaoImpl implements UserDao {
 	        	sql = "UPDATE `account` SET Email = '"+ user.getEmail() +"' WHERE Account = '"+ user.getAcc() +"' ";
 	        	jdbcTemplate.update(sql);		
 	        	}
-	        if(user.getSex()!="null"){
-	        	sql = "UPDATE `account` SET Sex = '"+ user.getSex() +"' WHERE Account = '"+ user.getAcc() +"' ";
+	        if(sex.equals("male")){
+	        	sql = "UPDATE `account` SET Sex = 'male' WHERE Account = '"+ user.getAcc() +"' ";
 	        	jdbcTemplate.update(sql);		
 	        	}
+	        if(sex.equals("female")){
+	        	sql = "UPDATE `account` SET Sex = 'female' WHERE Account = '"+ user.getAcc() +"' ";
+	        	jdbcTemplate.update(sql);		
+	        	} 	        
 	        if(user.getAge()!=""){
 	        	sql = "UPDATE `account` SET Age = '"+ user.getAge() +"' WHERE Account = '"+ user.getAcc() +"' ";
 	        	jdbcTemplate.update(sql);		
