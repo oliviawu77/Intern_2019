@@ -51,7 +51,7 @@ public class LoginController {
     	  mav.addObject("sex_msg", "Mr. ");
       }
       else if(sex.equals("female")) {
-    	  mav.addObject("sex_msg", "Ms .");
+    	  mav.addObject("sex_msg", "Ms. ");
       }
       mav.addObject("userlist", userDao.getUserList());
     } else {

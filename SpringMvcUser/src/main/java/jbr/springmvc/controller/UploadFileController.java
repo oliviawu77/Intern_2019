@@ -72,22 +72,21 @@ public class UploadFileController{
 	  }
 
 	  @RequestMapping(value = "/uploadfileProcessing", method = RequestMethod.POST)
-	  public ModelAndView updateUser(HttpServletRequest request, HttpServletResponse response,
+	  public ModelAndView uploadFile(HttpServletRequest request, HttpServletResponse response,
 			  @ModelAttribute("Employee") Employee employee, @RequestParam("file") MultipartFile file,
 			  HttpSession session){ 
-		  		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
-		  		MultipartFile multipartFile = multipartRequest.getFile("file");
-		  		String path = session.getServletContext().getRealPath("/");  
-		  		System.out.println(file.getOriginalFilename());
+		  		
+		  		//取得檔案
 		  	    String rootPath = request.getSession().getServletContext().getRealPath("/");
+		  	    
 		  	    // 先讀入檔案
 		  	    File dir = new File(rootPath + File.separator + "uploadedfile");
 		  	    if (!dir.exists()) {
 		  	        dir.mkdirs();
 		  	    }
-		  	  File serverFile = new File(dir.getAbsolutePath() + File.separator + file.getOriginalFilename());
-		  	  System.out.println( dir.getAbsolutePath() + File.separator + file.getOriginalFilename());
-		  	  try {
+		  	    File serverFile = new File(dir.getAbsolutePath() + File.separator + file.getOriginalFilename());
+		  	    //System.out.println( dir.getAbsolutePath() + File.separator + file.getOriginalFilename());
+		  	    try {
 		  		  InputStream is = file.getInputStream();
 		  		  BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(serverFile));
 		            int i;
@@ -113,7 +112,6 @@ public class UploadFileController{
 				  }
 			      // nextLine[] is an array of values ​​from the line 
 			      //System.out.println(nextLine[0] +  "\t" + nextLine[1] +  "\t" + nextLine[2] + "\t" + nextLine[3] +  "\t" + nextLine[4] +  "\t" + nextLine[5] +  "\t" + nextLine[6] + "\n"); 
-			      i++;
 			      employee.setId(nextLine[0]);
 			      employee.setJob_grade(nextLine[1]);
 			      employee.setJob_position(nextLine[2]);
@@ -121,7 +119,7 @@ public class UploadFileController{
 			      employee.setExercise_date(nextLine[4]);
 			      employee.setExercise_week(nextLine[5]);
 			      employee.setStep(nextLine[6]);
-			      userService.updateEmployee(employee);
+			      userService.createEmployee(employee);
 			  }
 			 }
 	        catch (Exception e)
@@ -129,7 +127,7 @@ public class UploadFileController{
 	            e.printStackTrace();
 	        }
 	        ModelAndView mav = new ModelAndView("uploadStatus");
-		  mav.addObject("message", "Uploading..");
+	        mav.addObject("message", "Uploading..");
 		  
 		  return mav; 
 	  }

@@ -9,7 +9,7 @@ public interface UserDao {
   void register(User user);
   void update(User user);
   void delete(User user);
-  void updateEmployee(Employee employee);
+  void createEmployee(Employee employee);
   
   User validateUser(Login login);
 }

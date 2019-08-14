@@ -13,6 +13,7 @@ import org.springframework.jdbc.core.RowMapper;
 import jbr.springmvc.model.Login;
 import jbr.springmvc.model.User;
 import jbr.springmvc.model.Employee;
+import jbr.springmvc.model.EmployeeList;
 
 public class UserDaoImpl implements UserDao {
 
@@ -22,7 +23,7 @@ public class UserDaoImpl implements UserDao {
   @Autowired
   JdbcTemplate jdbcTemplate;
   
-  public void updateEmployee(Employee employee) {
+  public void createEmployee(Employee employee) {
 	  try {
 		  	String sql = null;
 	        sql = "insert into `employee` values(?,?,?,?,?,?,?)";
@@ -103,6 +104,20 @@ public class UserDaoImpl implements UserDao {
 	  List<User> result = jdbcTemplate.query(sql, new UserMapper());
 	  return result;
   }
+  
+  public List<Employee> getEmployee(String id){
+
+	  String sql = "SELECT * from `employee` WHERE id = '" + id + "'";
+	  List<Employee> result = jdbcTemplate.query(sql, new EmployeeMapper());
+	  return result;
+  } 
+  
+  public List<EmployeeList> getEmployeeList(){
+
+	  String sql = "SELECT DISTINCT id from `employee`";
+	  List<EmployeeList> result = jdbcTemplate.query(sql, new EmployeeListMapper());
+	  return result;
+  }    
 
   public User validateUser(Login login) {
 
@@ -127,6 +142,30 @@ class UserMapper implements RowMapper<User> {
     user.setAge(rs.getString("Age"));
     user.setName(rs.getString("Name"));
     return user;
-  }
+  }  
 }
+
+class EmployeeMapper implements RowMapper<Employee> {
+
+	  public Employee mapRow(ResultSet rs, int arg1) throws SQLException {
+		Employee employee = new Employee();
+		employee.setId(rs.getString("id"));
+		employee.setJob_grade(rs.getString("job_grade"));
+		employee.setJob_position(rs.getString("job_position"));
+		employee.setWork_shift(rs.getString("work_shift"));
+		employee.setExercise_date(rs.getString("exercise_date"));
+		employee.setExercise_week(rs.getString("exercise_week"));
+	    employee.setStep(rs.getString("step"));
+	    return employee;
+	  }  
+	}
+
+class EmployeeListMapper implements RowMapper<EmployeeList> {
+
+	  public EmployeeList mapRow(ResultSet rs, int arg1) throws SQLException {
+		EmployeeList employeeList = new EmployeeList();
+		employeeList.setId(rs.getString("id"));
+	    return employeeList;
+	  }  
+	}
 }

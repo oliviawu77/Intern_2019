@@ -6,6 +6,7 @@ import jbr.springmvc.dao.UserDao;
 import jbr.springmvc.model.Login;
 import jbr.springmvc.model.User;
 import jbr.springmvc.model.Employee;
+import jbr.springmvc.model.EmployeeList;
 
 public class UserServiceImpl implements UserService {
 
@@ -21,8 +22,8 @@ public class UserServiceImpl implements UserService {
   public void delete(User user) {
 	  userDao.delete(user);
   	};
-    public void updateEmployee(Employee employee) {
-  	  userDao.updateEmployee(employee);
+    public void createEmployee(Employee employee) {
+  	  userDao.createEmployee(employee);
     	};    	
   public User validateUser(Login login) {
     return userDao.validateUser(login);
