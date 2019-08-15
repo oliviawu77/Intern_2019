@@ -29,61 +29,31 @@ $(function () {
                 //下方間距
                 marginBottom: 25
             },
-            title: {
-                text: '南部地區近30年每月平均溫度比較(1982 - 2011 年)單位 : °C',
-                x: -20 //位置至中
-            },
-            subtitle: {
-                text: '每月平均溫度表',
-                x: -20
-            },
-            credits: {
-            //隱藏官方連結
-            enabled: false
-            },
-            xAxis: {
-            //x軸的座標點
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-            },
-            yAxis: {
-                title: {
-                //Y軸表頭
-                    text: '溫度 (°C)'
-                },
-            },
-            tooltip: {
-                formatter: function() {
-                        return '<b>'+ this.series.name +'</b><br/>'+
-                        this.x +': '+ this.y +'°C';
-                }
-            },
-            legend: {
-            //由上至下
-            layout: 'vertical',
-            //靠左
-        align: 'left',
-        //從左上方為起點(0, 0)距離
-        x: 120,
-        y: 80,
-        //靠上
-        verticalAlign: 'top',
-        floating: true,
-        //框內背景顏色
-        backgroundColor: '#FFFFFF'
-            },
-            series: [{
-                name: '嘉義',
-                data: [16.5, 17.3, 19.6, 23.0, 25.9, 27.9, 28.7, 28.2, 27.1, 24.6, 21.5, 17.8]
-            }, {
-                name: '台南',
-                data: [17.6, 18.5, 21.1, 24.5, 27.2, 28.5, 29.2, 28.8, 28.1, 26.1, 22.9, 19.1]
-            }, {
-                name: '高雄',
-                data: [19.2, 20.2, 22.5, 25.4, 27.5, 28.5, 29.2, 28.7, 28.1, 26.7, 24.0, 20.6]
-            }, {
-                name: '恆春',
-                data: [20.7, 21.4, 23.1, 25.2, 27.0, 27.9, 28.4, 28.1, 27.4, 26.3, 24.3, 21.7]
-            }]
+			  title: {
+  			    "text": '會員每日步數',
+  			  },
+  			  subtitle: {
+  			    "text": '每日步數',
+  			  },
+  			  xAxis: {
+  			        categories: ['2019-07-01', '2019-07-02', '2019-07-03', '2019-07-04', '2019-07-05', '2019-07-06', '2019-07-07', '2019-07-08', '2019-07-09' ,'2019-07-10'],
+                		title: {
+	                	//X軸表頭
+	                  	  text: '上班方式'
+	                	},
+  			    },
+  	          yAxis: {
+  	                title: {
+  	                //Y軸表頭
+  	                    text: '步數'
+  	                },
+  	            },
+  			  series: [{
+  			        data: [200, 300, 700, 1000, 2300, 500, 600, 1000, 230, 670]
+  			    }],
+  			  legend: {
+  			        "enabled": false
+  			      },
         });
     });
   
@@ -94,13 +64,32 @@ $(function () {
 <body>
 <div id="test"> </div>
 	<table>
+	<thead>
+	<tr>
+		<th>會員代號</th>
+		<th>職業等級</th>
+		<th>職務類別</th>
+		<th>工作型態</th>	
+	</tr>
+	</thead>
+	<tr>
+		<td>${ID}</td> 
+		<td>${Job_grade}</td> 
+		<td>${Job_position}</td>
+		<td>${Work_shift}</td>
+	</tr>	
+	</table>
+	<table>
+	<thead>
+	<tr>
+		<th>運動日期</th>
+		<th>運動周期</th>
+		<th>步數</th>
+	</tr>
+	</thead>	
 	<tbody>
 	   <c:forEach var="list" items="${employee}">   
 	   <tr>
-	   <td>${list.id}</td> 
-	   <td>${list.job_grade}</td> 
-	   <td>${list.job_position}</td>
-	   <td>${work_shift}</td>	   
 	   <td>${list.exercise_date}</td> 
 	   <td>${list.exercise_week}</td> 
 	   <td>${list.step}</td> 

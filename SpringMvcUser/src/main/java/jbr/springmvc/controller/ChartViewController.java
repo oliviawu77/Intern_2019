@@ -41,7 +41,15 @@ public class ChartViewController {
 	    ApplicationContext context = new ClassPathXmlApplicationContext("classpath:jbr/config/user-beans.xml");
 	    UserDaoImpl userDao = (UserDaoImpl) context.getBean("userDao"); 	  
     ModelAndView mav = new ModelAndView("viewUser");
-    mav.addObject("employee", userDao.getEmployee(request.getParameter("id")));
+    String ID = request.getParameter("id");
+    mav.addObject("employee", userDao.getEmployee(ID));
+    
+    Employee emp = userDao.getEmployeeInformation(ID);
+    mav.addObject("ID", emp.getId());
+    mav.addObject("Job_grade", emp.getJob_grade());
+    mav.addObject("Job_position", emp.getJob_position());
+    mav.addObject("Work_shift", emp.getWork_shift());
+
     return mav;
   }  
 

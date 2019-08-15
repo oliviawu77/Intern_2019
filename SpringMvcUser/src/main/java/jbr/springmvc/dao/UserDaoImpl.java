@@ -110,7 +110,15 @@ public class UserDaoImpl implements UserDao {
 	  String sql = "SELECT * from `employee` WHERE id = '" + id + "'";
 	  List<Employee> result = jdbcTemplate.query(sql, new EmployeeMapper());
 	  return result;
-  } 
+  }
+
+  public Employee getEmployeeInformation(String id){
+
+	  String sql = "SELECT * from `employee` WHERE id = '" + id + "' LIMIT 0,1 ";
+	  List<Employee> employee = jdbcTemplate.query(sql, new EmployeeMapper());
+	  return employee.size() > 0 ? employee.get(0) : null;
+  }  
+  
   
   public List<EmployeeList> getEmployeeList(){
 
