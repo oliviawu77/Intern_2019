@@ -117,7 +117,39 @@ public class UserDaoImpl implements UserDao {
 	  String sql = "SELECT * from `employee` WHERE id = '" + id + "' LIMIT 0,1 ";
 	  List<Employee> employee = jdbcTemplate.query(sql, new EmployeeMapper());
 	  return employee.size() > 0 ? employee.get(0) : null;
-  }  
+  }
+  
+  public int AvgSteps_Employee(){
+
+	  String sql = "SELECT SUM(step)/COUNT(DISTINCT exercise_date)/COUNT(DISTINCT ID) FROM employee WHERE job_grade = '一般員工'";
+	  int employeeSteps = jdbcTemplate.queryForObject(sql, Integer.class);
+	  return employeeSteps;
+  }
+  
+  public int AvgSteps_Boss(){
+
+	  String sql = "SELECT SUM(step)/COUNT(DISTINCT exercise_date)/COUNT(DISTINCT ID) FROM employee WHERE job_grade = '主管'";
+	  int bossSteps = jdbcTemplate.queryForObject(sql, Integer.class);
+	  return bossSteps;
+  }
+
+  public int AvgSteps_Noshifts(){
+	  String sql = "SELECT SUM(step)/COUNT(DISTINCT exercise_date)/COUNT(DISTINCT ID) FROM employee WHERE work_shift = '一般上下班'";
+	  int noshiftsSteps = jdbcTemplate.queryForObject(sql, Integer.class);
+	  return noshiftsSteps;
+  }
+  
+  public int AvgSteps_shifts(){
+	  String sql = "SELECT SUM(step)/COUNT(DISTINCT exercise_date)/COUNT(DISTINCT ID) FROM employee WHERE work_shift = '輪班制'";
+	  int shiftsSteps = jdbcTemplate.queryForObject(sql, Integer.class);
+	  return shiftsSteps;
+  }
+
+  public String GetTop50(){
+	  String sql = "SELECT ID, SUM(step)/COUNT(DISTINCT exercise_date) FROM employee GROUP BY ID ORDER BY SUM(step)/COUNT(DISTINCT exercise_date) DESC LIMIT 0,50";
+	  String Top50 = jdbcTemplate.queryForObject(sql, String.class);
+	  return Top50;
+  }   
   
   
   public List<EmployeeList> getEmployeeList(){

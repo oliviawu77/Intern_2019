@@ -32,7 +32,11 @@ public class ChartViewController {
     ModelAndView mav = new ModelAndView("viewChart");
     ApplicationContext context = new ClassPathXmlApplicationContext("classpath:jbr/config/user-beans.xml");
     UserDaoImpl userDao = (UserDaoImpl) context.getBean("userDao");    
-    mav.addObject("employeelist", userDao.getEmployeeList());    
+    mav.addObject("employeelist", userDao.getEmployeeList());
+    mav.addObject("Avg_Employee", userDao.AvgSteps_Employee());
+    mav.addObject("Avg_Boss", userDao.AvgSteps_Boss());
+    mav.addObject("Avg_NoShift", userDao.AvgSteps_Noshifts());
+    mav.addObject("Avg_Shift", userDao.AvgSteps_shifts());
     return mav;
   }
   
@@ -43,7 +47,7 @@ public class ChartViewController {
     ModelAndView mav = new ModelAndView("viewUser");
     String ID = request.getParameter("id");
     mav.addObject("employee", userDao.getEmployee(ID));
-    
+
     Employee emp = userDao.getEmployeeInformation(ID);
     mav.addObject("ID", emp.getId());
     mav.addObject("Job_grade", emp.getJob_grade());

@@ -44,9 +44,10 @@ $(function () {
         	                //Y軸表頭
         	                    text: '步數'
         	                },
+        	                
         	            },
         			  series: [{
-        			        data: [200, 300]
+        			        data: [400, 200]
         			    }],
         			  legend: {
         			        "enabled": false
@@ -147,6 +148,7 @@ $(function () {
 <div id="steps_work_shift"></div><br>
 <div id="brand"> </div><br>
 	<h1>請選擇使用者</h1>
+
 	<table>
 	<tbody>
 	   <c:forEach var="list" items="${employeelist}">   
