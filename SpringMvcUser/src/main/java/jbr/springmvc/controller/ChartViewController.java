@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import jbr.springmvc.model.Employee;
+import jbr.springmvc.model.EmployeeTop50;
 import jbr.springmvc.model.EmployeeList;
 import jbr.springmvc.model.Login;
 import jbr.springmvc.model.User;
@@ -37,6 +38,11 @@ public class ChartViewController {
     mav.addObject("Avg_Boss", userDao.AvgSteps_Boss());
     mav.addObject("Avg_NoShift", userDao.AvgSteps_Noshifts());
     mav.addObject("Avg_Shift", userDao.AvgSteps_shifts());
+    mav.addObject("Percent1", userDao.GetPercent1());
+    mav.addObject("Percent2", userDao.GetPercent2());
+    mav.addObject("Percent3", userDao.GetPercent3());
+    mav.addObject("Percent4", userDao.GetPercent4());
+    mav.addObject("Top50", userDao.GetTop50());
     return mav;
   }
   

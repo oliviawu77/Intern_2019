@@ -14,6 +14,7 @@ import jbr.springmvc.model.Login;
 import jbr.springmvc.model.User;
 import jbr.springmvc.model.Employee;
 import jbr.springmvc.model.EmployeeList;
+import jbr.springmvc.model.EmployeeTop50;
 
 public class UserDaoImpl implements UserDao {
 
@@ -145,11 +146,44 @@ public class UserDaoImpl implements UserDao {
 	  return shiftsSteps;
   }
 
-  public String GetTop50(){
-	  String sql = "SELECT ID, SUM(step)/COUNT(DISTINCT exercise_date) FROM employee GROUP BY ID ORDER BY SUM(step)/COUNT(DISTINCT exercise_date) DESC LIMIT 0,50";
-	  String Top50 = jdbcTemplate.queryForObject(sql, String.class);
+  public List<EmployeeTop50> GetTop50(){
+	  String sql = "SELECT ID, SUM(step)/COUNT(DISTINCT exercise_date) AS avg_steps FROM employee GROUP BY ID ORDER BY SUM(step)/COUNT(DISTINCT exercise_date) DESC LIMIT 0,50";
+	  List<EmployeeTop50> Top50 = jdbcTemplate.query(sql, new EmployeeTop50Mapper());
 	  return Top50;
-  }   
+  } 
+
+  public float GetPercent1(){
+	  String sql = "SELECT COUNT(*) FROM (SELECT ID FROM employee GROUP BY ID HAVING SUM(step)/COUNT(DISTINCT exercise_date) < 5000) AS AMOUNT";
+	  float GetPercent1 = jdbcTemplate.queryForObject(sql, Integer.class);
+	  sql = "SELECT COUNT(*) FROM (SELECT ID FROM employee GROUP BY ID ) AS AMOUNT";
+	  float Total = jdbcTemplate.queryForObject(sql, Integer.class);
+	  GetPercent1 = GetPercent1 / Total;
+	  return GetPercent1;
+  }
+  public float GetPercent2(){
+	  String sql = "SELECT COUNT(*) FROM (SELECT ID FROM employee GROUP BY ID HAVING (SUM(step)/COUNT(DISTINCT exercise_date) >= 5000) AND (SUM(step)/COUNT(DISTINCT exercise_date) < 7500)) AS AMOUNT";
+	  float GetPercent2 = jdbcTemplate.queryForObject(sql, Integer.class);
+	  sql = "SELECT COUNT(*) FROM (SELECT ID FROM employee GROUP BY ID ) AS AMOUNT";
+	  float Total = jdbcTemplate.queryForObject(sql, Integer.class);
+	  GetPercent2 = GetPercent2 / Total;
+	  return GetPercent2;
+  }
+  public float GetPercent3(){
+	  String sql = "SELECT COUNT(*) FROM (SELECT ID FROM employee GROUP BY ID HAVING (SUM(step)/COUNT(DISTINCT exercise_date) >= 7500) AND (SUM(step)/COUNT(DISTINCT exercise_date) < 10000)) AS AMOUNT";
+	  float GetPercent3 = jdbcTemplate.queryForObject(sql, Integer.class);
+	  sql = "SELECT COUNT(*) FROM (SELECT ID FROM employee GROUP BY ID ) AS AMOUNT";
+	  float Total = jdbcTemplate.queryForObject(sql, Integer.class);
+	  GetPercent3 = GetPercent3 / Total;
+	  return GetPercent3;
+  }
+  public float GetPercent4(){
+	  String sql = "SELECT COUNT(*) FROM (SELECT ID FROM employee GROUP BY ID HAVING SUM(step)/COUNT(DISTINCT exercise_date) >= 10000) AS AMOUNT";
+	  float GetPercent4 = jdbcTemplate.queryForObject(sql, Integer.class);
+	  sql = "SELECT COUNT(*) FROM (SELECT ID FROM employee GROUP BY ID ) AS AMOUNT";
+	  float Total = jdbcTemplate.queryForObject(sql, Integer.class);
+	  GetPercent4 = GetPercent4 / Total;
+	  return GetPercent4;
+  }  
   
   
   public List<EmployeeList> getEmployeeList(){
@@ -206,6 +240,16 @@ class EmployeeListMapper implements RowMapper<EmployeeList> {
 		EmployeeList employeeList = new EmployeeList();
 		employeeList.setId(rs.getString("id"));
 	    return employeeList;
+	  }  
+	}
+
+class EmployeeTop50Mapper implements RowMapper<EmployeeTop50> {
+
+	  public EmployeeTop50 mapRow(ResultSet rs, int arg1) throws SQLException {
+		  EmployeeTop50 employeetop50 = new EmployeeTop50();
+		  employeetop50.setId(rs.getString("id"));
+		  employeetop50.setStep(rs.getInt("avg_steps"));
+	    return employeetop50;
 	  }  
 	}
 }

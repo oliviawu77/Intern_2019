@@ -11,11 +11,34 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel=stylesheet type="text/css" href="jsp/style.css">
 <title><spring:message code="welcome_title" /></title>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script type="text/javascript">
+
+var Avg_Employee = <c:out value="${Avg_Employee}"/>;
+var Avg_Boss = <c:out value="${Avg_Boss}"/>;
+var Avg_NoShift = <c:out value="${Avg_NoShift}"/>;
+var Avg_Shift = <c:out value="${Avg_Shift}"/>;
+var Percent1 = <c:out value="${Percent1}"/>;
+var Percent2 = <c:out value="${Percent2}"/>;
+var Percent3 = <c:out value="${Percent3}"/>;
+var Percent4 = <c:out value="${Percent4}"/>;
+
+var top50List_ID = [];
+var top50List_step = [];
+<c:forEach items="${Top50}" var="listItem">
+  var arr_id = [];
+  var arr_steps = [];
+  arr_id.push("<c:out value="${listItem.id}" />");
+  top50List_ID.push(arr_id);
+  arr_steps.push("<c:out value="${listItem.step}" />");
+  top50List_step.push(parseInt(arr_steps));  
+</c:forEach>
+
+alert(top50List_step);
 $(function () {
-    var chart;
+    var chart1, chart2, chart3, test;
     $(document).ready(function() {
         chart1 = new Highcharts.Chart(
         		{
@@ -47,7 +70,8 @@ $(function () {
         	                
         	            },
         			  series: [{
-        			        data: [400, 200]
+        				  	name: "平均步數",
+        			        data: [Avg_Employee, Avg_Boss]
         			    }],
         			  legend: {
         			        "enabled": false
@@ -83,7 +107,8 @@ $(function () {
         	                },
         	            },
         			  series: [{
-        			        data: [200, 300]
+            			  	name: "平均步數",
+        			        data: [Avg_NoShift, Avg_Shift]
         			    }],
         			  legend: {
         			        "enabled": false
@@ -105,20 +130,20 @@ $(function () {
         			    "text": '平均步數',
         			  },
         			   series: [{
-        			        name: 'Brands',
+        			        name: '百分比',
         			        colorByPoint: true,
         			        data: [{
         			            name: '小於5000',
-        			            y: 25
+        			            y: Percent1
         			        }, {
         			            name: '5001~7500',
-        			            y: 25
+        			            y: Percent2
         			        }, {
         			            name: '7501~10000',
-        			            y: 30
+        			            y: Percent3
         			        }, {
         			            name: '大於10001',
-        			            y: 20
+        			            y: Percent4
         			        }]
         			    }],
         			  tooltip: {
@@ -138,7 +163,45 @@ $(function () {
         			    	    },
         			  },
  
-});        
+});
+        test = new Highcharts.Chart(
+        		{
+                      chart: {
+                        //取得div容器的id
+                            renderTo: 'testtest',
+                            zoomType: 'xy',
+                            //折線圖
+                            type: 'column',
+                        },            		
+        			  title: {
+        			    "text": 'Top 50 會員平均步數排名',
+        			  },
+        			  subtitle: {
+        			    "text": '平均步數排名',
+        			  },
+        			  xAxis: {
+        			        categories: ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50',],
+  	                		title: {
+    	                	//X軸表頭
+    	                  	  text: '名次'
+    	                	},
+        			    },
+        	          yAxis: {
+        	                title: {
+        	                //Y軸表頭
+        	                    text: '平均步數'
+        	                },
+        	                
+        	            },
+        			  series: [{
+            			  	name: "平均步數",
+        			        data: top50List_step
+        			    }],
+        			  legend: {
+        			        "enabled": false
+        			      },
+ 
+});
 });
 });
 </script>
@@ -146,7 +209,8 @@ $(function () {
 <body>
 <div id="steps_grade"></div><br>
 <div id="steps_work_shift"></div><br>
-<div id="brand"> </div><br>
+<div id="brand"></div><br>
+<div id="testtest"></div><br>
 	<h1>請選擇使用者</h1>
 
 	<table>

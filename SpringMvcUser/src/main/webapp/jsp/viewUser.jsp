@@ -14,20 +14,33 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script type="text/javascript">
+
+var dateList = [];
+var stepsList = [];
+<c:forEach items="${employee}" var="listItem">
+  var arr_date = [];
+  var arr_steps = [];
+  arr_date.push("<c:out value="${listItem.exercise_date}" />");
+  dateList.push(arr_date);
+  arr_steps.push("<c:out value="${listItem.step}" />");
+  stepsList.push(parseInt(arr_steps));  
+</c:forEach>
+
+var chart;
+
 $(function () {
-    var chart;
     $(document).ready(function() {
         chart = new Highcharts.Chart({
             chart: {
             //取得div容器的id
-                renderTo: 'test',
+                renderTo: 'userSteps',
                 zoomType: 'xy',
                 //折線圖
                 type: 'line',
                 //右方間距
                 marginRight: 130,
                 //下方間距
-                marginBottom: 25
+                marginBottom: 100
             },
 			  title: {
   			    "text": '會員每日步數',
@@ -36,10 +49,10 @@ $(function () {
   			    "text": '每日步數',
   			  },
   			  xAxis: {
-  			        categories: ['2019-07-01', '2019-07-02', '2019-07-03', '2019-07-04', '2019-07-05', '2019-07-06', '2019-07-07', '2019-07-08', '2019-07-09' ,'2019-07-10'],
+  			        categories: dateList,
                 		title: {
 	                	//X軸表頭
-	                  	  text: '上班方式'
+	                  	  text: '日期'
 	                	},
   			    },
   	          yAxis: {
@@ -49,7 +62,7 @@ $(function () {
   	                },
   	            },
   			  series: [{
-  			        data: [200, 300, 700, 1000, 2300, 500, 600, 1000, 230, 670]
+  			       data:stepsList
   			    }],
   			  legend: {
   			        "enabled": false
@@ -58,11 +71,12 @@ $(function () {
     });
   
 });
+
 </script>
-<title>折線圖</title>
+<title>使用者折線圖</title>
 </head>
 <body>
-<div id="test"> </div>
+<div id="userSteps"> </div>
 	<table>
 	<thead>
 	<tr>
