@@ -15,13 +15,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel=stylesheet type="text/css" href="jsp/style.css">
-<title><spring:message code="welcome_title" /></title>
+<title><spring:message code="uploadFile_title" /></title>
 </head>
 <body>
-	<h1>上傳檔案</h1>
+	<spring:message code="page.cl" /><br>
+	<a href="?lang=en">English</a>
+	<a href="?lang=zh_TW">繁體中文</a>
+	<a href="?lang=zh_CN">简体中文</a>
+	<h1><spring:message code="uploadFile_title" /></h1>
 	<form:form action="uploadfileProcessing" method="POST" enctype="multipart/form-data" >
         <input type="file" name="file"/>
-        <button type="submit" id="upload">上傳</button>
+        <button type="submit" id="upload">Upload</button>
 	</form:form>
 </body>
 </html>

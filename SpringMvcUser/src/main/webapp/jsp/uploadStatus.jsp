@@ -16,7 +16,8 @@
 <title><spring:message code="welcome_title" /></title>
 </head>
 <body>
-<h1>Upload Status</h1>
+<h1><spring:message code="uploadFileStatus_title" /></h1>
 <h2>Message : ${message}</h2>
+<a href="/SpringMvcUser">Back</a>
 </body>
 </html>

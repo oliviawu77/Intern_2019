@@ -10,7 +10,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel=stylesheet type="text/css" href="jsp/style.css">
-<title><spring:message code="welcome_title" /></title>
+<title><spring:message code="viewChart_title" /></title>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
@@ -36,7 +36,6 @@ var top50List_step = [];
   top50List_step.push(parseInt(arr_steps));  
 </c:forEach>
 
-alert(top50List_step);
 $(function () {
     var chart1, chart2, chart3, test;
     $(document).ready(function() {
@@ -180,7 +179,7 @@ $(function () {
         			    "text": '平均步數排名',
         			  },
         			  xAxis: {
-        			        categories: ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50',],
+        			        categories: ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50'],
   	                		title: {
     	                	//X軸表頭
     	                  	  text: '名次'
@@ -207,18 +206,22 @@ $(function () {
 </script>
 </head>
 <body>
+	<spring:message code="page.cl" /><br>
+	<a href="?lang=en">English</a>
+	<a href="?lang=zh_TW">繁體中文</a>
+	<a href="?lang=zh_CN">简体中文</a>
 <div id="steps_grade"></div><br>
 <div id="steps_work_shift"></div><br>
 <div id="brand"></div><br>
 <div id="testtest"></div><br>
-	<h1>請選擇使用者</h1>
+	<h1><spring:message code="viewChart_ChooseUser"/></h1>
 
 	<table>
 	<tbody>
 	   <c:forEach var="list" items="${employeelist}">   
 	   <tr>  
 	   <td>${list.id}</td>  
-	   <td><a href="viewUser?id=${list.id}">閱讀圖表</a></td>
+	   <td><a href="viewUser?id=${list.id}"><spring:message code="viewChart_viewUser"/></a></td>
 	   </tr>
 	   </c:forEach>    	
 	</tbody>

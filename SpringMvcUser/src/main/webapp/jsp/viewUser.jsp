@@ -73,17 +73,17 @@ $(function () {
 });
 
 </script>
-<title>使用者折線圖</title>
+<title><spring:message code="viewUser_title" /></title>
 </head>
 <body>
 <div id="userSteps"> </div>
 	<table>
 	<thead>
 	<tr>
-		<th>會員代號</th>
-		<th>職業等級</th>
-		<th>職務類別</th>
-		<th>工作型態</th>	
+		<th><spring:message code="viewUser_ID" /></th>
+		<th><spring:message code="viewUser_JobGrade" /></th>
+		<th><spring:message code="viewUser_JobPosition" /></th>
+		<th><spring:message code="viewUser_WorkShift" /></th>	
 	</tr>
 	</thead>
 	<tr>
@@ -96,9 +96,9 @@ $(function () {
 	<table>
 	<thead>
 	<tr>
-		<th>運動日期</th>
-		<th>運動周期</th>
-		<th>步數</th>
+		<th><spring:message code="viewUser_ExerciseDate" /></th>
+		<th><spring:message code="viewUser_ExerciseWeek" /></th>
+		<th><spring:message code="viewUser_Steps" /></th>
 	</tr>
 	</thead>	
 	<tbody>

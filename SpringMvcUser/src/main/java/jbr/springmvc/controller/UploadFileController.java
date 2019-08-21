@@ -75,7 +75,7 @@ public class UploadFileController{
 	  public ModelAndView uploadFile(HttpServletRequest request, HttpServletResponse response,
 			  @ModelAttribute("Employee") Employee employee, @RequestParam("file") MultipartFile file,
 			  HttpSession session){ 
-		  		
+		  		ModelAndView mav = new ModelAndView("uploadStatus");
 		  		//取得檔案
 		  	    String rootPath = request.getSession().getServletContext().getRealPath("/");
 		  	    
@@ -125,9 +125,11 @@ public class UploadFileController{
 	        catch (Exception e)
 	        {
 	            e.printStackTrace();
+	            mav.addObject("message", "Error!");
+	            return mav;
 	        }
-	        ModelAndView mav = new ModelAndView("uploadStatus");
-	        mav.addObject("message", "Uploading..");
+	        
+	        mav.addObject("message", "OK!");
 		  
 		  return mav; 
 	  }

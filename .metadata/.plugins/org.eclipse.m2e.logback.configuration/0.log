@@ -4436,3 +4436,59 @@ Caused by: org.eclipse.core.runtime.CoreException: One or more constraints have 
 2019-08-19 17:36:56,072 [Worker-131: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringMvcUser
 2019-08-19 17:36:56,073 [Worker-131: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringMvcUser
 2019-08-19 17:36:59,425 [Worker-131: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-08-20 10:40:50,748 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-08-20 17:00:37,207 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-08-20 22:09:06,517 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-08-21 10:55:52,584 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-08-21 11:29:31,531 [Worker-18: Cleaning selected projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringMvcUser
+2019-08-21 11:29:34,749 [Worker-21: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for junit:junit:jar:${junit.version} is missing, no dependency information available
+2019-08-21 11:29:34,762 [Worker-21: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.springframework:spring-core:jar:${spring.version} is missing, no dependency information available
+2019-08-21 11:29:34,778 [Worker-21: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.springframework:spring-beans:jar:${spring.version} is missing, no dependency information available
+2019-08-21 11:29:34,808 [Worker-21: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.springframework:spring-context:jar:${spring.version} is missing, no dependency information available
+2019-08-21 11:29:34,845 [Worker-21: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.springframework:spring-jdbc:jar:${spring.version} is missing, no dependency information available
+2019-08-21 11:29:34,920 [Worker-21: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.springframework:spring-test:jar:${spring.version} is missing, no dependency information available
+2019-08-21 11:29:34,969 [Worker-21: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.springframework:spring-webmvc:jar:${spring.version} is missing, no dependency information available
+2019-08-21 11:29:34,993 [Worker-21: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for javax.servlet:javax.servlet-api:jar:${servlet.version} is missing, no dependency information available
+2019-08-21 11:29:35,109 [Worker-21: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for mysql:mysql-connector-java:jar:${mysql.connector.version} is missing, no dependency information available
+2019-08-21 11:29:37,616 [Worker-21: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-08-21 11:29:37,620 [Worker-21: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace_sts4\SpringExample\src\main\resources
+2019-08-21 11:29:37,622 [Worker-21: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-08-21 11:29:37,641 [Worker-21: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace_sts4\SpringExample\src\test\resources
+2019-08-21 11:29:42,966 [Worker-21: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-08-21 11:29:42,979 [Worker-21: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2019-08-21 11:29:43,037 [Worker-21: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-08-21 11:29:43,038 [Worker-21: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-08-21 11:29:43,038 [Worker-21: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringMvcUser
+2019-08-21 11:29:43,040 [Worker-21: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringMvcUser
+2019-08-21 11:29:43,287 [Worker-21: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-08-21 11:54:46,226 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-08-21 12:53:38,793 [Worker-20: Cleaning selected projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringMvcUser
+2019-08-21 12:53:40,878 [Worker-23: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for junit:junit:jar:${junit.version} is missing, no dependency information available
+2019-08-21 12:53:40,911 [Worker-23: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.springframework:spring-core:jar:${spring.version} is missing, no dependency information available
+2019-08-21 12:53:40,925 [Worker-23: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.springframework:spring-beans:jar:${spring.version} is missing, no dependency information available
+2019-08-21 12:53:40,940 [Worker-23: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.springframework:spring-context:jar:${spring.version} is missing, no dependency information available
+2019-08-21 12:53:40,958 [Worker-23: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.springframework:spring-jdbc:jar:${spring.version} is missing, no dependency information available
+2019-08-21 12:53:40,990 [Worker-23: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.springframework:spring-test:jar:${spring.version} is missing, no dependency information available
+2019-08-21 12:53:41,005 [Worker-23: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.springframework:spring-webmvc:jar:${spring.version} is missing, no dependency information available
+2019-08-21 12:53:41,032 [Worker-23: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for javax.servlet:javax.servlet-api:jar:${servlet.version} is missing, no dependency information available
+2019-08-21 12:53:41,047 [Worker-23: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for mysql:mysql-connector-java:jar:${mysql.connector.version} is missing, no dependency information available
+2019-08-21 12:53:43,374 [Worker-23: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-08-21 12:53:43,376 [Worker-23: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace_sts4\SpringExample\src\main\resources
+2019-08-21 12:53:43,378 [Worker-23: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-08-21 12:53:43,379 [Worker-23: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace_sts4\SpringExample\src\test\resources
+2019-08-21 12:53:46,317 [Worker-23: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-08-21 12:53:46,324 [Worker-23: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2019-08-21 12:53:46,357 [Worker-23: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-08-21 12:53:46,357 [Worker-23: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-08-21 12:53:46,358 [Worker-23: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringMvcUser
+2019-08-21 12:53:46,360 [Worker-23: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringMvcUser
+2019-08-21 12:53:46,495 [Worker-23: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-08-21 13:01:16,545 [Worker-29: Cleaning selected projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringMvcUser
+2019-08-21 13:01:16,868 [Worker-32: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-08-21 13:01:16,895 [Worker-32: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2019-08-21 13:01:16,936 [Worker-32: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-08-21 13:01:16,938 [Worker-32: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-08-21 13:01:16,938 [Worker-32: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringMvcUser
+2019-08-21 13:01:16,944 [Worker-32: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringMvcUser
+2019-08-21 13:01:16,972 [Worker-32: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-08-21 16:48:59,853 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
